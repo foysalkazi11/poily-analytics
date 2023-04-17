@@ -1,0 +1,267 @@
+.bg-color-yellow-light {
+  background-color: #fefaed;
+}
+
+.bg-color-green-light {
+  background-color: #f3ffe3;
+}
+
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+.formGroup {
+  width: 100%;
+}
+.formGroup select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position-x: 94%;
+  background-position-y: 13px;
+}
+
+.customSelectbx {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 1px 2px 4px #ececec;
+  color: #bcbcbc;
+  font-size: 14px;
+  padding: 0 15px;
+  box-shadow: none;
+  min-height: 4.1rem;
+  background-color: #fff;
+  border: 1px solid #ececec;
+}
+.customSelectbx:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #7cbc39;
+  outline: 0;
+  box-shadow: none;
+}
+
+select.custom-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: white url('/images/select-arrow.svg') no-repeat right 1rem center;
+  background-size: 1.2rem;
+  padding-right: 2.5rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 0 15px;
+  font-size: 10px;
+  color: #bcbcbc;
+  line-height: 36px;
+  font-size: 14px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  min-height: 4.1rem;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #7cbc39;
+  outline: 0;
+  box-shadow: none;
+}
+.form-control::-moz-placeholder {
+  font-size: 14px;
+  color: #bcbcbc;
+}
+.form-control::placeholder {
+  font-size: 14px;
+  color: #bcbcbc;
+}
+
+.field {
+  position: relative;
+  width: 100%;
+}
+.field label {
+  margin-bottom: 1rem;
+  display: block;
+  font-size: 1.6rem;
+}
+.field label.required:after {
+  content: '*';
+  color: #c62727;
+  margin-left: 0.3rem;
+}
+.field + .field {
+  margin-top: 2rem;
+}
+.field_endAdorment {
+  position: relative;
+}
+.field_endAdorment .custom-input {
+  padding-right: 4rem;
+}
+.field_endAdorment .custom-input + * {
+  position: absolute;
+  right: 15px;
+  bottom: 50%;
+}
+.field_startAdornment {
+  position: relative;
+}
+.field_startAdornment .custom-input {
+  padding-left: 4rem;
+}
+.field_startAdornment .custom-input + * {
+  position: absolute;
+  left: 15px;
+  bottom: 50%;
+}
+.field_endAdorment--password {
+  position: relative;
+}
+.field_endAdorment--password .custom-input {
+  padding-right: 4rem;
+}
+.field_endAdorment--password button {
+  position: absolute;
+  right: 7px;
+  bottom: 20px;
+}
+.field__endAdorment--unit {
+  position: relative;
+}
+.field__endAdorment--unit > button {
+  outline: 0;
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #ececec;
+  border-radius: 0.8rem 0 0 0.8rem;
+}
+.field__endAdorment--unit .custom-input {
+  padding-left: 5.5rem;
+}
+.field .errorMessage {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0;
+  color: #c62727;
+  height: 1.4rem;
+}
+.errorMessage {
+  bottom: -1.5rem;
+  left: 0;
+  color: #c62727;
+  height: 1.4rem;
+}
+
+.custom-input {
+  border: 1px solid #dbdbdb;
+  box-shadow: 1px 2px 4px #ececec;
+  padding: 1rem;
+  font-size: 16px;
+  border-radius: 0.8rem;
+  height: 4.5rem;
+  transition: 0.3s;
+  outline: 0;
+  width: 100%;
+  min-width: 12rem;
+  background-color: white;
+}
+.custom-input::-moz-placeholder {
+  color: rgba(102, 102, 102, 0.7);
+}
+.custom-input::placeholder {
+  color: rgba(102, 102, 102, 0.7);
+}
+.custom-input:disabled {
+  background-color: rgb(233, 233, 233);
+  cursor: not-allowed;
+}
+.custom-input[readonly] {
+  pointer-events: none;
+  background-color: #dbdbdb;
+  border: 0;
+}
+.custom-input:focus {
+  border-color: #7cbc39;
+}
+
+.field-with-unit {
+  position: relative;
+}
+.field-with-unit .field-with-unit__unit {
+  position: absolute;
+  right: 1rem;
+  top: 1.4rem;
+  font-size: 1.4rem;
+  opacity: 0.7;
+}
+.field-with-unit .custom-input {
+  padding-right: 4rem;
+}
+textarea.custom-input {
+  resize: vertical;
+  min-height: 120px;
+  margin-bottom: 0.9rem;
+}
+/*# sourceMappingURL=contact.css.map */
+
+/* contract us page side content start here */
+.bg-color-yellow-light {
+  background-color: #fefaed;
+}
+
+.bg-color-green-light {
+  background-color: #f3ffe3;
+}
+
+.contractUsAsideContainer {
+  border: 1rem solid #f2ffe4;
+  padding: 2rem 0;
+  border-radius: 10px;
+}
+.contractUsAsideContainer .text {
+  color: #7cbc39;
+  text-decoration: underline;
+  font-size: 2rem;
+  padding: 0 2rem 2rem 2rem;
+}
+.contractUsAsideContainer .list {
+  list-style-type: disc;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #ececec;
+  font-size: 1.6rem;
+  margin-left: 5rem;
+}
+.contractUsAsideContainer .list:last-child {
+  border-bottom: none;
+} /*# sourceMappingURL=ContractUsAside.module.css.map */
+/* contract us page side content end hee */
