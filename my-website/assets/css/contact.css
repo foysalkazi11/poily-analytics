@@ -59,7 +59,7 @@ select.custom-input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: white url('/images/select-arrow.svg') no-repeat right 1rem center;
+  background: white url("/images/select-arrow.svg") no-repeat right 1rem center;
   background-size: 1.2rem;
   padding-right: 2.5rem;
 }
@@ -105,13 +105,13 @@ select.custom-input {
   font-size: 1.6rem;
 }
 .field label.required:after {
-  content: '*';
+  content: "*";
   color: #c62727;
   margin-left: 0.3rem;
 }
-.field + .field {
+/* .field + .field {
   margin-top: 2rem;
-}
+} */
 .field_endAdorment {
   position: relative;
 }
@@ -246,7 +246,8 @@ textarea.custom-input {
 .contractUsAsideContainer {
   border: 1rem solid #f2ffe4;
   padding: 2rem 0;
-  border-radius: 10px;
+  border-radius: 1rem;
+  height: 100%;
 }
 .contractUsAsideContainer .text {
   color: #7cbc39;

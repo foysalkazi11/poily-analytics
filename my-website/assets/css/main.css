@@ -15,45 +15,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
-.padding_bottom--10 {
-  padding-bottom: 1rem;
-}
-.padding_top--10 {
-  padding-top: 1rem;
-}
-
-.padding_bottom--20 {
-  padding-bottom: 2rem;
-}
-.padding_top--20 {
-  padding-top: 2rem;
-}
-.padding_top--40 {
-  padding-top: 4rem;
-}
-.paddting__top--16 {
-  padding-top: 1.6rem;
-}
-
-.padding__bottom_60 {
-  padding-bottom: 5.5rem;
-}
-.margin-bottom-40 {
-  margin-bottom: 4rem;
-}
-.margin-top-40 {
-  margin-top: 4rem;
-}
-.margin-top-20 {
-  margin-top: 2rem;
-}
-.margin-bottom-20 {
-  margin-bottom: 2rem;
-}
-
-.margin-bottom-24 {
-  margin-bottom: 2.4rem;
-}
 
 .bg-color-yellow-light {
   background-color: #fefaed;
@@ -119,7 +80,9 @@ li {
 }
 
 p,
-a {
+a,
+label,
+li {
   font-family: "Circe";
   text-decoration: none;
 }
@@ -274,6 +237,45 @@ section {
   width: 20rem;
   height: 15rem;
   transform: rotate(-5deg);
+}
+.padding_bottom--10 {
+  padding-bottom: 1rem;
+}
+.padding_top--10 {
+  padding-top: 1rem;
+}
+
+.padding_bottom--20 {
+  padding-bottom: 2rem;
+}
+.padding_top--20 {
+  padding-top: 2rem;
+}
+.padding_top--40 {
+  padding-top: 4rem;
+}
+.paddting__top--16 {
+  padding-top: 1.6rem;
+}
+
+.padding__bottom_60 {
+  padding-bottom: 5.5rem;
+}
+.margin-bottom-40 {
+  margin-bottom: 4rem;
+}
+.margin-top-40 {
+  margin-top: 4rem;
+}
+.margin-top-20 {
+  margin-top: 2rem;
+}
+.margin-bottom-20 {
+  margin-bottom: 2rem;
+}
+
+.margin-bottom-24 {
+  margin-bottom: 2.4rem;
 }
 
 .padding_bottom--10 {
@@ -690,6 +692,9 @@ footer .container-fluid .copyright h4 {
 .nav-list li a:hover,
 .nav-list li a:active {
   color: #fe5717;
+}
+.nav-list li a.active {
+  color: #fe5717 !important;
 }
 
 @media screen and (min-width: 60rem) {

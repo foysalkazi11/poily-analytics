@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Primary Meta Tags -->
+<title>Poily Analytics: Data Story Tellers</title>
+<meta name="title" content="Poily Analytics: Data Story Tellers">
+<meta name="description" content="Let Us Tell your Lifestyle Health Program Data Story So that it is heard Loud and Clear!">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.poily.com/poily_analytics">
+<meta property="og:title" content="Poily Analytics: Data Story Tellers">
+<meta property="og:description" content="Let Us Tell your Lifestyle Health Program Data Story So that it is heard Loud and Clear!">
+<meta property="og:image" content="./assets/img/meta_image_pa.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.poily.com/poily_analytics">
+<meta property="twitter:title" content="Poily Analytics: Data Story Tellers">
+<meta property="twitter:description" content="Let Us Tell your Lifestyle Health Program Data Story So that it is heard Loud and Clear!">
+<meta property="twitter:image" content="./assets/img/meta_image_pa.png">
+
+<!-- favicons -->
+<link rel="icon" href="./Poily_favicons/favicon.ico" sizes="any">
+<link rel="icon" href="./Poily_favicons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./Poily_favicons/apple-touch-icon.png">
+<link rel="manifest" href="./Poily_favicons/site.webmanifest">
+<meta name="theme-color" content="#4a4a4a">
+
+<!-- style sheet -->
+    <link rel="stylesheet" href="./assets/css/font.css">
+   <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  
+    <body>
+    <!-- header section start -->
+    <header>
+      
+
+        <div class="navigation">
+            <div class="nav-container">
+              <div class="brand">
+                <a href="#">
+                    <img src="./assets/img/poly_logo.svg" class="img-fluid navbar-brand" alt="">
+                </a>
+              </div>
+              <nav>
+                <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+    
+              
+              </nav>
+              <a href="contact.html" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </header>
+    <!-- header section end -->
+    <!-- hero section start -->
+     <section class="section_banner gradient__bg--color">
+      <div class="container">
+        <div class="u-center-text">
+         
+            <h1 class="banner__title">
+              Discover the future of 
+              <span class="text__green">lifestyle Health </span>
+          </br>
+              <span class="text__black">Loud and Clear</span></h1>
+            </h1>
+            <p class="paragraph-primary paddting__top--16 padding__bottom_60">Transform your lifestyle health program data into captivating stories. <br>
+                        Contact us today for a <strong>FREE</strong> data story assessment!</p>
+          
+        </div>
+      </div>
+    </section>
+    <!-- hero section end -->
+    <!-- main section start here -->
+    <div class="container">
+         <div class="u-center-text">
+          <div class="max__80">
+            <p id="loading_para padding_bottom--20 padding_top--20">Loading...</p>
+
+          </div>
+        </div>
+
+    </div>
+    <!-- main section end here -->
+
+
+
+<!-- footer start  -->
+    <footer>
+        <div class="container-fluid">
+            <div class="u-center-text">
+                <a href="#">
+                    <img src="./assets/img/poly_logo.svg" class="img-fluid navbar-brand" alt="">
+                </a>
+                <div class="social_media">
+                    <a href=""><img src="./assets/img/facebook-logo.png" class="facebook img-fluid"></img></a>
+                    <a href=""> <img src="./assets/img/instagram_logo.png " alt="" class="instagram img-fluid"></a>
+                    <a href=""><img src="./assets/img/twitte_logo.png" alt="" class="twitter img-fluid"></a>
+                    <a href=""> <img src="./assets/img/youtube_log.png" alt="" class="youtube img-fluid"></a>
+                    <a href=""> <img src="./assets/img/facebook-logo.png" alt=""  class="pintrest img-fluid"></a>
+                </div>
+                <div class="copyright">
+                    <h4>© 2022 POILY - 2022</h4>
+                </div>
+            </div>
+            <img src="./assets/img/footer_bg.png" alt="" class="footer-img">
+        </div>
+    </footer>
+
+    <!-- footer end -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script>
+        (function($) { 
+$(function() { 
+
+//  open and close nav 
+$('#navbar-toggle').click(function() {
+  $('nav ul').slideToggle();
+});
+
+
+// Hamburger toggle
+$('#navbar-toggle').on('click', function() {
+  this.classList.toggle('active');
+});
+
+
+// If a link has a dropdown, add sub menu toggle.
+$('nav ul li a:not(:only-child)').click(function(e) {
+  $(this).siblings('.navbar-dropdown').slideToggle("slow");
+
+  // Close dropdown when select another dropdown
+  $('.navbar-dropdown').not($(this).siblings()).hide("slow");
+  e.stopPropagation();
+});
+
+
+// Click outside the dropdown will remove the dropdown class
+$('html').click(function() {
+  $('.navbar-dropdown').hide();
+});
+}); 
+})(jQuery); 
+  </script>
+
+
+  
+    
+</body>
+
+</html>
