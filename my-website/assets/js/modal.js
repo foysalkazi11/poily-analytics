@@ -6,7 +6,6 @@ window.addEventListener("load", () => {
   var params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
   });
-  console.log(params.submitted);
 
   var submitted = params.submitted;
   if (submitted === "true") {
@@ -16,10 +15,18 @@ window.addEventListener("load", () => {
 
 overlay.addEventListener("click", () => {
   modal.style.display = "none";
-  window.history.replaceState({}, document.title, "/contract.html" + "");
+  window.history.replaceState(
+    {},
+    document.title,
+    "poily_analytics/contact.html" + ""
+  );
 });
 
 popup_close_btn.addEventListener("click", () => {
   modal.style.display = "none";
-  window.history.replaceState({}, document.title, "/contract.html" + "");
+  window.history.replaceState(
+    {},
+    document.title,
+    "poily_analytics/contact.html" + ""
+  );
 });

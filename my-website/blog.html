@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+      <!-- original site na name = https://www.poily.com/poily_analytics
+    temp site name = https://poily-analytics.netlify.app/index.html -->
+
    <!-- Primary Meta Tags -->
 <title>Poily Analytics: Data Story Tellers</title>
 <meta name="title" content="Poily Analytics: Data Story Tellers">
@@ -33,14 +36,12 @@
 
 <!-- style sheet -->
     <link rel="stylesheet" href="./assets/css/font.css">
-   <link rel="stylesheet" href="./assets/css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+   <link rel="stylesheet" href="./assets/css/blog.css">
   
     <body>
     <!-- header section start -->
     <header>
       
-
         <div class="navigation">
             <div class="nav-container">
               <div class="brand">
@@ -63,10 +64,11 @@
         </div>
     </header>
     <!-- header section end -->
+
     <!-- hero section start -->
      <section class="section_banner gradient__bg--color">
-      <div class="container">
-        <div class="u-center-text">
+      <div class="container u-center-text">
+      
          
             <h1 class="banner__title">
               Discover the future of 
@@ -81,14 +83,84 @@
       </div>
     </section>
     <!-- hero section end -->
+
     <!-- main section start here -->
     <div class="container">
-         <div class="u-center-text">
-          <div class="max__80">
-            <p id="loading_para padding_bottom--20 padding_top--20">Loading...</p>
+      
+        
+            <!-- section menu start here -->
+            <div class="max__80 d-flex align-center justify-content-between d-wrap-reverse-phone margin-bottom-20 ">
+              <div class="d-flex align-center justify-content-between d-wrap">
+                <div class="menuBox margin_top_20">
+                  <p id="all" class="menuBox__text cursor-pointer">All</p>
+                </div>
+                <div class="menuBox margin_left_20 margin_top_20">
+                  <p id="how_to" class="menuBox__text cursor-pointer">How to</p>
+                </div>
+                <div class="menuBox margin_left_20 margin_top_20">
+                  <p id="our_work" class="menuBox__text cursor-pointer">Our work</p>
+                </div>
+                <div class="menuBox margin_left_20 margin_top_20">
+                  <p id="spot_light" class="menuBox__text cursor-pointer">Spot light</p>
+                </div>
+              </div>
+              <div>
+                 <div class="menuBox d-flex align-center margin_top_20">
+                   
+                   <img src="./assets/img/search_icon.svg" class="menuBox__search_icon" alt="icon" >
+                   <p class="menuBox__text">
+                    Search</p>
+                </div>
+              </div>
 
-          </div>
-        </div>
+            </div>
+            <!-- section menu end here -->
+            
+            <!-- show loading start here -->
+            <div id="loading" class="max__80 display-none">
+              <h1 class="d-flex align-center justify-content-center"  style="height: 50vh;">Loading...</h1>
+            </div>
+            <!-- show loading end here -->
+
+            <!-- show single blog start here -->
+            <div id="single-blog-details" class="max__50 padding_top_20 padding_bottom--20 display-none">
+
+            </div>
+            <!-- show single blog end here -->
+
+            <!-- blog section start here -->
+            <div id="blog-list-container" class="max__80 padding_top_20 padding_bottom--20 display-none">
+               <!-- Feature blog section start here -->
+            <div id="feature-blogs" class="d-grid grid-auto-rows grid-gap-20 featureBlogContainer">
+                <div id="feature-blogs-left"></div>
+                <div id="feature-blogs-right"> </div>
+              </div>
+              
+              <!-- Feature blog section end here -->
+              <div class="br" ></div>
+
+              <!-- all blog section start here -->
+              <div>
+                <h1>All blog post</h1>
+
+                <div id="all-blogs" class="d-grid grid-auto-rows grid-gap-20 allBlogListContainer margin_top_20 margin-bottom-20">
+                </div>
+              </div>
+              <!-- all blog section end here -->
+
+            </div>
+
+            <!-- blog section end here -->
+
+             <!-- Error message start here -->
+             <div id="error" class="display-none">
+              <h1 class="max__80 d-flex align-center justify-content-center"  style="height: 30vh;">Data load failed</h1>
+            </div>
+            <!-- Error message end here -->
+
+
+        
+       
 
     </div>
     <!-- main section end here -->
@@ -118,6 +190,7 @@
     </footer>
 
     <!-- footer end -->
+    <script type="module" src="./assets/js/blog.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <script>
         (function($) { 

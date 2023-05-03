@@ -1,0 +1,49 @@
+.banner__title {
+  font-size: 6rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: $color-secondary-light;
+  @include respond(laptop) {
+    font-size: 5.2rem;
+  }
+  @include respond(tab-port) {
+    font-size: 6.6rem;
+  }
+  @include respond(phone) {
+    font-size: 4.8rem;
+  }
+  @include respond(sm-phone) {
+    font-size: 3.3rem;
+  }
+}
+
+.heading-primary {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 1;
+  color: $color-black;
+  display: inline-block;
+}
+
+.paragraph-primary {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  text-align: center;
+  color: $color-drak-greay;
+  @include respond(laptop) {
+    font-size: 2rem;
+  }
+  @include respond(sm-phone) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.paragraph-secondary {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  color: $color-drak-greay;
+}

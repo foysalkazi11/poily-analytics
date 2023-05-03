@@ -1,0 +1,27 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        background: $color-secondary-light;
+        border: 0.2rem solid $color-secondary-light;
+        border-radius: 1.2rem;
+        padding: 1rem 3rem;
+        color: $color-white !important;
+        font-size: 2.4rem;
+
+    //      @include respond(tab-land){
+    //     background: red;
+    // }
+    // @include respond(phone){
+    //     background: green;
+    // }
+    }
+    
+    // &:hover {
+      
+    // }
+    
+  
+   
+}
+
