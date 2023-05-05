@@ -1,73 +1,65 @@
-import HTMLReactParser from "html-react-parser";
-import React, { FC } from "react";
-import s from "../index.module.scss";
+import handleBlockData from "./useBlock.js";
 
-import { BlockType } from "../../../../../type/editorjsBlockType";
-import useBlock from "../useBlock";
-import { BlockProps } from "..";
+const bullet = (children) => `<li>${children}</li>`;
 
-export interface ListBlockData {
-  style: "ordered" | "unordered";
-  items: NestedListItem[];
-  children?: React.ReactNode;
-}
-
-export type NestedListItem =
-  | {
-      content: string;
-      items: NestedListItem[];
-    }
-  | string;
-
-const Bullet: FC<{ children?: React.ReactNode }> = ({ children }) => (
-  <li>{children}</li>
-);
-
-const Group: FC<{
-  Tag: keyof JSX.IntrinsicElements;
-  items: NestedListItem[];
-  className?: string;
-  align?: any;
-}> = ({ Tag, items, className, align = "left", ...props }) => (
-  <div className={className}>
-    <Tag {...props} style={{ textAlign: align }}>
-      {items.map((item, i) => (
-        <Bullet key={i}>
-          {typeof item === "string" ? (
-            HTMLReactParser(item)
-          ) : (
-            <>
-              {HTMLReactParser(item?.content)}
-              {item?.items?.length > 0 && (
-                <Group Tag={Tag} items={item.items} {...props} />
-              )}
-            </>
-          )}
-        </Bullet>
-      ))}
-    </Tag>
+const groups = (tag, items, className = "", align = "left", id) =>
+  `<div class="${className}">
+  <${tag} id=${id} data-anchor=${id} style="text-align:${align}">
+   ${items.map((item, i) =>
+     bullet(
+       typeof item === "string"
+         ? item
+         : item?.items?.length > 0 &&
+             groups(tag, item.items, `blog_list`, "left", id)
+     )
+   )}
+  
+  </${tag}>
   </div>
-);
+  `;
 
-const List = ({ block, addBlockPadding }: BlockProps) => {
+const list = (block) => {
   const { data, tunes } = block;
-  const handleBlockData = useBlock();
   const alignment = tunes?.alignmentTuneTool?.alignment;
-  const align: any = alignment || "left";
-  const Tag = (
-    data?.style === "ordered" ? `ol` : `ul`
-  ) as keyof JSX.IntrinsicElements;
-  return (
-    data && (
-      <Group
-        Tag={Tag}
-        className={`${s.list} ${addBlockPadding ? "" : s.noBlockPadding}`}
-        items={data.items}
-        align={align}
-        {...handleBlockData(block)}
-      />
-    )
-  );
+  const align = alignment || left;
+
+  const tag = data?.style === "ordered" ? `ol` : `ul`;
+
+  return groups(tag, data.items, `blog_list`, align, handleBlockData(block));
 };
 
-export default List;
+export default list;
+
+export function List(block) {
+  const { data, tunes } = block;
+  const alignment = tunes?.alignmentTuneTool?.alignment;
+  const align = alignment || "left";
+  const Tag = data?.style === "ordered" ? "ol" : "ul";
+  const items = data?.items || [];
+
+  const renderBullet = (item) => {
+    if (typeof item === "string") {
+      return item;
+    } else {
+      let bulletHtml = item?.content || "";
+      if (item?.items?.length > 0) {
+        const nestedList = item.items
+          .map((nestedItem) => `<li>${renderBullet(nestedItem)}</li>`)
+          .join("");
+        bulletHtml += `<${Tag}>${nestedList}</${Tag}>`;
+      }
+      return bulletHtml;
+    }
+  };
+
+  const renderList = () => {
+    const listItems = items
+      .map((item, i) => `<li>${renderBullet(item)}</li>`)
+      .join("");
+    return `<${Tag} id=${handleBlockData(block)} data-anchor=${handleBlockData(
+      block
+    )} style="text-align: ${align}">${listItems}</${Tag}>`;
+  };
+
+  return `<div class="blog_list">${renderList()}</div>`;
+}

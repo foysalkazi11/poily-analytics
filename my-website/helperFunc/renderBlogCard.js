@@ -1,6 +1,10 @@
 import formatDate from "./formateData.js";
 
-export default function renderBlogCard(blogData, modifyCard = false) {
+export default function renderBlogCard(
+  blogData,
+  modifyCard = false,
+  allBlogPost = false
+) {
   const {
     _id,
     title,
@@ -19,16 +23,18 @@ export default function renderBlogCard(blogData, modifyCard = false) {
   const html = `
            <div class="blog_card ${modifyCard && "blog_card--row"}">
                   <img src=${coverImage} class="img" alt="img">
-                  <div>
-                    <h1 id=${slug} class="blog_card_heading cursor-pointer margin_top_10 margin_bottom_10 truncate_two_tine">${title}</h1>
-                  <p class="margin_bottom_10 truncate_two_tine">${description}</p>
+                  <div class="${modifyCard && "margin_left_20"}">
+                   <a href="blogDetails.html?blogSlug=${slug}" > <h1 id=${slug} class="${
+    allBlogPost ? "blog_card_heading_all_blog" : "blog_card_heading"
+  } cursor-pointer margin_top_10 margin_bottom_10 truncate_two_tine">${title}</h1></a>
+                  <p class="blog_card_description margin_bottom_10 truncate_two_tine">${description}</p>
                   <div class="d-flex align-center justify-content-between margin_bottom_10">
                     <div class="d-flex align-center justify-content-center">
                       <div class="iconBox__authorAvatar"></div>
                       <div class="pl_10">
                         <h4>${
-                          createdBy?.displayName ||
-                          `${createdBy?.firstName} ${createdBy?.lastName}`
+                          `${createdBy?.displayName}`.toUpperCase() ||
+                          `${createdBy?.firstName} ${createdBy?.lastName}`.toUpperCase()
                         }</h4>
                         <p>${data.month} ${data.day}, ${data.year}</p>
                       </div>
@@ -38,9 +44,7 @@ export default function renderBlogCard(blogData, modifyCard = false) {
                       <div class="iconBox d-flex align-center justify-content-center">
                         <img src="./assets/img/share.svg" class="iconBox__icon" alt="icon">
                       </div>
-                      <div class="iconBox d-flex align-center justify-content-center margin_left_10">
-                        <img src="./assets/img/bookmark.svg" class="iconBox__icon" alt="icon">
-                      </div>
+                    
                     </div>
 
                   </div>
@@ -49,3 +53,7 @@ export default function renderBlogCard(blogData, modifyCard = false) {
           `;
   return html;
 }
+
+const bookmarkIcon = `  <div class="iconBox d-flex align-center justify-content-center margin_left_10">
+                        <img src="./assets/img/bookmark.svg" class="iconBox__icon" alt="icon">
+                      </div>`;

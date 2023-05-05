@@ -7,7 +7,8 @@ const paragraph = (block) => {
   const align = alignment || left;
 
   return `<p
-          class="blog_paragraph pt-10 pb-10"
+          class="blog_paragraph"
+          id="${handleBlockData(block)}"
       data-anchor="${handleBlockData(block)}"
       style="text-align: ${align};"
     >

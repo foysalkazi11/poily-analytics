@@ -1,3 +1,12 @@
+.text-bold {
+  font-weight: bold;
+}
+.margin-auto {
+  margin: auto;
+}
+.width-full {
+  width: 100%;
+}
 .u-center-text {
   text-align: center !important;
 }
@@ -36,6 +45,12 @@ section {
 }
 .justify-content-between {
   justify-content: space-between;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.justify-content-evenly {
+  justify-content: space-evenly;
 }
 .z-index-2 {
   z-index: 2;
@@ -122,6 +137,9 @@ section {
 
 .padding_bottom--10 {
   padding-bottom: 1rem;
+}
+.padding_bottom--50 {
+  padding-bottom: 5rem;
 }
 
 .padding_bottom--20 {
