@@ -26,17 +26,29 @@ export default function renderBlogCard(
                   <div class="${modifyCard && "margin_left_20"}">
                    <a href="blogDetails.html?blogSlug=${slug}" > <h1 id=${slug} class="${
     allBlogPost ? "blog_card_heading_all_blog" : "blog_card_heading"
-  } cursor-pointer margin_top_10 margin_bottom_10 truncate_two_tine">${title}</h1></a>
-                  <p class="blog_card_description margin_bottom_10 truncate_two_tine">${description}</p>
+  } cursor-pointer margin_top_10 margin_bottom_10 ${
+    allBlogPost
+      ? "truncate line-clamp-one"
+      : modifyCard
+      ? "truncate line-clamp-three"
+      : "truncate_two_tine"
+  }">${title}</h1></a>
+                  <p class="blog_card_description margin_bottom_10 ${
+                    modifyCard
+                      ? "truncate line-clamp-three"
+                      : "truncate_two_tine"
+                  }">${description}</p>
                   <div class="d-flex align-center justify-content-between margin_bottom_10">
                     <div class="d-flex align-center justify-content-center">
                       <div class="iconBox__authorAvatar"></div>
                       <div class="pl_10">
-                        <h4>${
+                        <h4 class="iconBox__authorName">${
                           `${createdBy?.displayName}`.toUpperCase() ||
                           `${createdBy?.firstName} ${createdBy?.lastName}`.toUpperCase()
                         }</h4>
-                        <p>${data.month} ${data.day}, ${data.year}</p>
+                        <p class="iconBox__authorPostDate">${data.month} ${
+    data.day
+  }, ${data.year}</p>
                       </div>
 
                     </div>

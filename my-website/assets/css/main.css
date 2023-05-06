@@ -35,16 +35,19 @@ ORDER: Base + typography > general layout + grid > page layout > components
 html {
   font-size: 62.5%;
 }
+
 @media only screen and (max-width: 75em) {
   html {
     font-size: 56.25%;
   }
 }
+
 @media only screen and (max-width: 56.25em) {
   html {
     font-size: 50%;
   }
 }
+
 @media only screen and (min-width: 112.5em) {
   html {
     font-size: 75%;
@@ -94,33 +97,39 @@ li {
     margin-left: auto;
   }
 }
+
 @media screen and (max-width: 1200px) {
   .container {
     padding-left: 3rem;
     padding-right: 3rem;
   }
 }
+
 .banner__title {
   font-size: 6rem;
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: #fe5717;
 }
+
 @media only screen and (max-width: 87.3em) {
   .banner__title {
     font-size: 5.2rem;
   }
 }
+
 @media only screen and (max-width: 56.25em) {
   .banner__title {
     font-size: 6.6rem;
   }
 }
+
 @media only screen and (max-width: 37.5em) {
   .banner__title {
     font-size: 4.8rem;
   }
 }
+
 @media only screen and (max-width: 35.5em) {
   .banner__title {
     font-size: 3.3rem;
@@ -142,11 +151,13 @@ li {
   text-align: center;
   color: #4d4d4d;
 }
+
 @media only screen and (max-width: 87.3em) {
   .paragraph-primary {
     font-size: 2rem;
   }
 }
+
 @media only screen and (max-width: 35.5em) {
   .paragraph-primary br {
     display: none;
@@ -212,6 +223,7 @@ section {
   top: -3rem;
   right: -6rem;
 }
+
 @media only screen and (max-width: 56.25em) {
   .text__element--img {
     top: -1rem;
@@ -219,6 +231,7 @@ section {
     width: 4rem;
   }
 }
+
 @media only screen and (max-width: 35.5em) {
   .text__element--img {
     top: -2rem;
@@ -238,9 +251,11 @@ section {
   height: 15rem;
   transform: rotate(-5deg);
 }
+
 .padding_bottom--10 {
   padding-bottom: 1rem;
 }
+
 .padding_top--10 {
   padding-top: 1rem;
 }
@@ -248,12 +263,15 @@ section {
 .padding_bottom--20 {
   padding-bottom: 2rem;
 }
+
 .padding_top--20 {
   padding-top: 2rem;
 }
+
 .padding_top--40 {
   padding-top: 4rem;
 }
+
 .paddting__top--16 {
   padding-top: 1.6rem;
 }
@@ -261,15 +279,19 @@ section {
 .padding__bottom_60 {
   padding-bottom: 5.5rem;
 }
+
 .margin-bottom-40 {
   margin-bottom: 4rem;
 }
+
 .margin-top-40 {
   margin-top: 4rem;
 }
+
 .margin-top-20 {
   margin-top: 2rem;
 }
+
 .margin-bottom-20 {
   margin-bottom: 2rem;
 }
@@ -310,6 +332,7 @@ section {
   max-width: 65%;
   margin: auto;
 }
+
 @media only screen and (max-width: 56.25em) {
   .max__80 {
     max-width: 100%;
@@ -328,14 +351,17 @@ section {
   padding-top: 0;
   position: relative;
 }
+
 @media only screen and (max-width: 35.5em) {
   .banner__review--card {
     max-width: 95%;
   }
 }
+
 .banner__review--card .banner__review--img img {
   margin-top: -4rem;
 }
+
 .banner__review--card .banner__review--content {
   font-size: 1.8rem;
   line-height: 1.6;
@@ -344,6 +370,7 @@ section {
   margin-bottom: 1rem;
   font-weight: 400;
 }
+
 .banner__review--card .banner__review--name {
   font-size: 2rem;
   line-height: 1;
@@ -356,15 +383,18 @@ section {
   max-width: 85%;
   margin: auto;
 }
+
 @media only screen and (max-width: 35.5em) {
   .benefit__card {
     max-width: 100%;
     margin-bottom: 3rem;
   }
 }
+
 .benefit__card .benefit__card--img img {
   height: 15rem;
 }
+
 .benefit__card .benefit__card--title {
   font-weight: 700;
   font-size: 3rem;
@@ -372,9 +402,11 @@ section {
   color: #000;
   font-family: "Circe";
 }
+
 .benefit__card .benefit__border--img {
   padding: 1.4rem 0;
 }
+
 .benefit__card .benefit__card--description {
   font-size: 1.6rem;
   line-height: 1.4;
@@ -397,11 +429,13 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
 @media only screen and (max-width: 35.5em) {
   .card-grid {
     grid-template-columns: 1fr;
   }
 }
+
 .card-grid .card {
   float: left;
   height: 15rem;
@@ -412,17 +446,17 @@ section {
   transition: opacity 0.3s ease-out;
   width: 30rem;
 }
+
 @media only screen and (max-width: 75em) {
   .card-grid .card {
     width: auto;
   }
 }
+
 .card-grid .card:after {
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) -10%,
-    #fff 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0) -10%,
+      #fff 100%);
   bottom: -0.1rem;
   content: "";
   display: block;
@@ -431,6 +465,7 @@ section {
   right: 0.1rem;
   position: absolute;
 }
+
 .card-grid .card .card-content {
   background-color: #fff;
   color: #323232;
@@ -443,29 +478,34 @@ section {
   padding: 1.5rem;
   position: absolute;
   top: 0;
-  transition: all 0.3s;
+  transition: all 0.30s;
   transition-property: max-height, min-height, box-shadow, background-color;
   border-radius: 2rem;
+
 }
+
 .card-grid .card .card-content .card-title {
   font-family: "Circe";
   font-size: 1.8rem;
   line-height: 1.2;
   margin-top: 0;
 }
+
 .card-grid .card .card-content .d-flex {
   margin-bottom: 1rem;
 }
+
 .card-grid .card .card-content p {
   margin-bottom: 1.5rem;
   margin-top: 0;
 }
+
 .card-grid .card .card-content p:last-child {
   margin-bottom: 0;
 }
 
-.card > a:hover .card-content,
-.card > a:focus .card-content {
+.card>a:hover .card-content,
+.card>a:focus .card-content {
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.16),
     0 0.2rem 1rem 0 rgba(0, 0, 0, 0.12);
   max-height: 27.5rem;
@@ -475,6 +515,7 @@ section {
     border-color 0.2s;
   z-index: 10000;
   border: 0.1rem solid #7cbc39;
+  transition: 0.30s;
 }
 
 .card-grid:hover .card:not(:hover) {
@@ -504,22 +545,26 @@ section {
   max-width: 60%;
   margin-right: auto;
 }
+
 @media only screen and (max-width: 48em) {
   .review_wrap {
     max-width: 80%;
   }
 }
+
 .review_wrap .review__img {
   width: 10rem;
   margin-right: auto;
   margin-left: auto;
 }
+
 .review_wrap .review__name {
   font-size: 2rem;
   line-height: 1;
   color: #fe5717;
   font-weight: 700;
 }
+
 .review_wrap .review__description {
   font-weight: 400;
   font-size: 3rem;
@@ -534,11 +579,13 @@ section {
   padding: 5rem 3rem;
   text-align: center;
 }
+
 @media only screen and (max-width: 56.25em) {
   .why__card {
     margin-bottom: 2rem;
   }
 }
+
 .why__card .why__card--title {
   font-family: "Circe";
   font-size: 3.2rem;
@@ -546,6 +593,7 @@ section {
   color: #fe5717;
   padding-bottom: 2rem;
 }
+
 .why__card .why__card--description {
   font-size: 1.9rem;
   line-height: 1.5;
@@ -559,6 +607,7 @@ section {
 .color-green-light {
   background: #f2ffe4;
 }
+
 .color-green-light .why__card--title {
   color: #7cbc39;
 }
@@ -573,6 +622,7 @@ section {
   border-radius: 2.5rem;
   overflow: hidden;
 }
+
 .work__card--img img {
   width: 100%;
 }
@@ -588,6 +638,7 @@ section {
   transition: all 0.3s;
   cursor: pointer;
 }
+
 .work__card--title:hover {
   color: #fe5717;
 }
@@ -597,22 +648,27 @@ footer {
   padding-top: 10rem;
   padding-bottom: 4rem;
 }
+
 footer .container-fluid {
   position: relative;
 }
+
 footer .container-fluid .footer-img {
   position: absolute;
   top: -51%;
   width: 94%;
   z-index: -2;
 }
+
 footer .container-fluid .social_media {
   padding-top: 5rem;
   padding-bottom: 2.5rem;
 }
+
 footer .container-fluid .social_media a {
   padding: 0 1rem;
 }
+
 footer .container-fluid .copyright h4 {
   font-family: "Circe";
   font-weight: 400;
@@ -626,6 +682,7 @@ footer .container-fluid .copyright h4 {
   display: flex;
   justify-content: space-between;
 }
+
 @media only screen and (max-width: 56.25em) {
   .row {
     flex-wrap: wrap;
@@ -635,6 +692,7 @@ footer .container-fluid .copyright h4 {
 .col-lg-3 {
   width: 32.4%;
 }
+
 @media only screen and (max-width: 56.25em) {
   .col-lg-3 {
     width: 90%;
@@ -646,6 +704,7 @@ footer .container-fluid .copyright h4 {
 .col-lg-6 {
   width: 49%;
 }
+
 @media only screen and (max-width: 56.25em) {
   .col-lg-6 {
     width: 90%;
@@ -657,6 +716,7 @@ footer .container-fluid .copyright h4 {
 .col-lg-6-fluid {
   width: 49%;
 }
+
 @media only screen and (max-width: 56.25em) {
   .col-lg-6-fluid {
     width: 100%;
@@ -668,6 +728,7 @@ footer .container-fluid .copyright h4 {
 .col-lg-8 {
   width: 65%;
 }
+
 @media only screen and (max-width: 56.25em) {
   .col-lg-8 {
     width: 90%;
@@ -675,6 +736,7 @@ footer .container-fluid .copyright h4 {
     margin-right: auto;
   }
 }
+
 @media only screen and (max-width: 56.25em) {
   .row-reverse-tab {
     flex-wrap: wrap-reverse;
@@ -684,15 +746,18 @@ footer .container-fluid .copyright h4 {
 .nav-list li {
   padding: 0 3rem;
 }
+
 .nav-list li a {
   font-size: 2.3rem;
   color: #000;
   transition: all 0.3s;
 }
+
 .nav-list li a:hover,
 .nav-list li a:active {
   color: #fe5717;
 }
+
 .nav-list li a.active {
   color: #fe5717 !important;
 }
@@ -707,15 +772,18 @@ footer .container-fluid .copyright h4 {
     padding-right: 3rem;
     padding-top: 3rem;
   }
+
   .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   ul.nav-list {
     display: flex !important;
   }
 }
+
 .navigation {
   position: absolute;
   z-index: 2;
@@ -737,40 +805,51 @@ footer .container-fluid .copyright h4 {
     display: block;
     top: 1rem;
   }
+
   nav {
     width: 100%;
   }
+
   .nav-list {
     background-color: #fff;
   }
+
   nav ul {
     display: none;
   }
+
   nav ul li {
     float: none;
   }
+
   .nav-list li {
     padding: 2rem 3rem;
     text-align: center;
   }
+
   nav ul li ul li a {
     padding-left: 3rem;
   }
+
   .navbar-dropdown {
     position: static;
   }
+
   .nav-container .btn {
     display: none;
   }
+
   .brand {
     padding: 2rem;
   }
 }
+
 @media screen and (min-width: 60rem) {
   .nav-list {
     display: block !important;
   }
 }
+
 #navbar-toggle {
   position: absolute;
   left: 1.8rem;
@@ -815,84 +894,104 @@ footer .container-fluid .copyright h4 {
 }
 
 .section_banner {
-  background: linear-gradient(0deg, #f9f9f9 0%, #dff8ff 101.95%);
+  /* background: linear-gradient(0deg, #f9f9f9 0%, #dff8ff 101.95%); */
+  background-image: url(../img/metaimage.png);
   padding: 15rem 0 6rem;
   position: relative;
+  background-position: center;
+  background-size: cover;
 }
+
 .section_banner .green-line-lottie {
   position: absolute;
-  bottom: 13%;
-  right: 7%;
+  bottom: 3.5rem;
   z-index: 0;
+  width: 100%;
+  left: 0;
 }
+
 @media only screen and (max-width: 56.25em) {
   .section_banner .green-line-lottie {
     display: none;
   }
 }
+
 .section_banner .data-lottie {
   position: absolute;
   top: 41%;
   left: 16%;
   transform: translate(-50%, -50%);
 }
+
 @media only screen and (max-width: 87.3em) {
   .section_banner .data-lottie {
     position: absolute;
     top: 43%;
     left: 12%;
   }
+
   .section_banner .data-lottie lottie-player {
     width: 28rem;
   }
 }
+
 @media only screen and (max-width: 87.3em) and (max-width: 87.3em) {
   .section_banner .data-lottie lottie-player {
     width: 20rem;
   }
 }
+
 @media only screen and (max-width: 56.25em) {
   .section_banner .data-lottie {
     display: none;
   }
 }
+
 .section_banner .bar-graph-lottie {
   position: absolute;
   bottom: 10%;
   left: 10%;
 }
+
 @media only screen and (max-width: 87.3em) {
   .section_banner .bar-graph-lottie {
     left: 5%;
   }
+
   .section_banner .bar-graph-lottie lottie-player {
     width: 30rem;
   }
 }
+
 @media only screen and (max-width: 87.3em) and (max-width: 87.3em) {
   .section_banner .bar-graph-lottie lottie-player {
     width: 23rem;
   }
 }
+
 @media only screen and (max-width: 56.25em) {
   .section_banner .bar-graph-lottie {
     display: none;
   }
 }
+
 .section_banner .lady-lottie {
   position: absolute;
   bottom: 0;
   right: 5%;
 }
+
 @media only screen and (max-width: 56.25em) {
   .section_banner .lady-lottie {
     right: 0%;
   }
+
   .section_banner .lady-lottie lottie-player {
     width: 80%;
     margin-left: auto;
   }
 }
+
 @media only screen and (max-width: 56.25em) {
   .section_banner .lady-lottie {
     display: none;
@@ -903,12 +1002,14 @@ footer .container-fluid .copyright h4 {
 .section__who {
   position: relative;
 }
+
 .section__who .hospital__img {
   position: absolute;
   bottom: 12rem;
   right: 0;
   width: 50%;
 }
+
 @media only screen and (max-width: 48em) {
   .section__who .hospital__img {
     display: none;
@@ -921,12 +1022,14 @@ footer .container-fluid .copyright h4 {
   position: relative;
   padding-bottom: 0;
 }
+
 .section__service .our__service--img {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 50%;
 }
+
 @media only screen and (max-width: 48em) {
   .section__service .our__service--img {
     display: none;
@@ -941,22 +1044,26 @@ footer .container-fluid .copyright h4 {
   position: relative;
   padding: 7rem 0;
 }
+
 .section__benefit .benefit__top--img {
   position: absolute;
   top: 0;
   top: -3rem;
   width: 100%;
 }
+
 @media only screen and (max-width: 48em) {
   .section__benefit .benefit__top--img {
     top: -1rem;
   }
 }
+
 .section__benefit .benefit__bottom--img {
   position: absolute;
   width: 100%;
   bottom: -3rem;
 }
+
 @media only screen and (max-width: 48em) {
   .section__benefit .benefit__bottom--img {
     bottom: -2rem;
@@ -986,6 +1093,7 @@ footer .container-fluid .copyright h4 {
   text-align: center;
   padding-top: 3.4rem;
 }
+
 .owl-dots button.owl-dot {
   width: 1.5rem;
   height: 1.5rem;
@@ -1025,40 +1133,48 @@ footer .container-fluid .copyright h4 {
 .section__team {
   position: relative;
 }
+
 @media only screen and (max-width: 48em) {
   .section__team .team__img {
     width: 10%;
   }
 }
+
 @media only screen and (max-width: 48em) {
   .section__team .team_center_img img {
     width: 26%;
   }
 }
+
 .section__team .team__top--img {
   position: absolute;
   top: 0;
   top: -3rem;
   width: 100%;
 }
+
 @media only screen and (max-width: 48em) {
   .section__team .team__top--img {
     top: -1rem;
   }
 }
+
 .section__team .team__bottom--img {
   position: absolute;
   width: 100%;
   bottom: -3rem;
 }
+
 @media only screen and (max-width: 35.5em) {
   .section__team .team__bottom--img {
     bottom: -1rem;
   }
 }
+
 .section__team .container {
   position: relative;
 }
+
 .section__team .container .team_member {
   font-weight: 700;
   font-size: 2.4rem;
@@ -1066,6 +1182,7 @@ footer .container-fluid .copyright h4 {
   color: #000;
   padding-top: 1.6rem;
 }
+
 .section__team .container .member_desc {
   font-size: 1.6rem;
   line-height: 1.2;
@@ -1074,39 +1191,208 @@ footer .container-fluid .copyright h4 {
   opacity: 0.6;
   padding-top: 0.8rem;
 }
+
 .section__team .container .member_1 {
   position: absolute;
   top: 24%;
   left: 11%;
 }
+
 .section__team .container .member_2 {
   position: absolute;
   top: 72%;
 }
+
 .section__team .container .member_3 {
   position: absolute;
   top: 60%;
   left: 26%;
 }
+
 .section__team .container .member_4 {
   position: absolute;
   top: 71%;
   right: 25%;
 }
+
 .section__team .container .member_5 {
   position: absolute;
   top: 44%;
   right: 0%;
 }
+
 .section__team .container .member_6 {
   position: absolute;
   top: 14%;
   right: 15%;
 }
+
 @media only screen and (max-width: 35.5em) {
   .section__team .container .member_6 {
     top: 21%;
   }
 }
 
-/* section__team end*/ /*# sourceMappingURL=main.css.map */
+/* section__team end*/
+/*# sourceMappingURL=main.css.map */
+@media screen and (max-width: 1260px) {
+  .section_banner .green-line-lottie {
+    bottom: 13rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section_banner .lady-lottie {
+    right: 0px;
+    max-width: 50%;
+  }
+}
+
+
+
+/* .why_card {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.08);
+  border-radius: 15px;
+  padding: 40px;
+  box-sizing: border-box;
+} */
+
+
+.why__new .container-fluid {
+  width: 95%;
+  margin: auto;
+}
+
+.card-grid-ct {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.card-ct {
+  height: 32rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  position: relative;
+  padding: 1.5rem;
+  transition: opacity 0.3s ease-out;
+  width: 28%;
+  position: relative;
+
+}
+
+.card-ct::before {
+  content: "";
+  background-image: url(../img/arrow.png);
+  width: 34%;
+  height: 20rem;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: -16.1rem;
+  z-index: 33;
+}
+
+.card-grid-ct .card-ct:last-child:before {
+  display: none;
+}
+
+.card-ct::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) -10%, white 100%);
+  bottom: -0.1rem;
+  content: "";
+  display: block;
+  height: 5rem;
+  left: 0.1rem;
+  right: 0.1rem;
+  position: absolute;
+}
+
+.card-ct:nth-child(2) {
+  margin-top: 5rem;
+}
+
+.card-ct:nth-child(2)::before {
+  right: -201px;
+  transform: rotate(-35deg);
+}
+
+.card-ct .card-content {
+  color: #323232;
+  font-size: 1.6rem;
+  left: 0;
+  line-height: 1.7;
+  max-height: 32rem;
+  min-height: 32rem;
+  overflow: hidden;
+  padding: 2.5rem;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s;
+  transition-property: max-height, min-height, box-shadow, background-color;
+  background: #FFFFFF;
+  box-shadow: 0px 0.4rem 1.4rem rgba(0, 0, 0, 0.08);
+  border-radius: 1.5rem;
+  transition: max-height 0.30s, min-height 0.30s;
+}
+
+.card-ct .card-content .card-title {
+  font-size: 2.3rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+.card-ct .card-content p {
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+.card-ct .card-content p:last-child {
+  margin-bottom: 0;
+}
+
+.card-ct>a:hover .card-content,
+.card-ct>a:focus .card-content {
+  border-color: #409bd2;
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.16), 0 0.2rem 1rem 0 rgba(0, 0, 0, 0.12);
+  max-height: 72rem;
+  min-height: auto;
+  overflow: auto;
+  transition: max-height 0.3s 0.5s, min-height 0.3s 0.5s, box-shadow 0.5s 0.4s, border-color 0.2s;
+  z-index: 10000;
+}
+
+.card-grid-ct:hover .card:not(:hover) {
+  opacity: 0.5;
+  transition: opacity 0.3s ease-out 0.5s;
+}
+@media only screen and (max-width: 90em) {
+  .card-ct::before {
+    right: -12.1rem;
+}
+.card-ct:nth-child(2)::before {
+  right: -166px;
+}
+}
+@media only screen and (max-width: 75em) {
+  .card-ct {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .card-ct:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .card-ct::before {
+    display: none;
+  }
+  .section_banner {
+    background: linear-gradient(0deg, #f9f9f9 0%, #dff8ff 101.95%); 
+  }
+  
+}

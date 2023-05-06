@@ -1,3 +1,11 @@
+.liner-gradient-background {
+  background: linear-gradient(0deg, #f9f9f9 0%, #dff8ff 101.95%);
+}
+.section_banner {
+  background: linear-gradient(0deg, #f9f9f9 0%, #dff8ff 101.95%);
+  padding: 15rem 0 6rem;
+  position: relative;
+}
 .text-bold {
   font-weight: bold;
 }
@@ -35,7 +43,7 @@ section {
   flex-wrap: wrap;
 }
 .d-wrap-reverse-phone {
-  @include respond(sm-phone) {
+  @include respond(phone) {
     flex-wrap: wrap-reverse;
   }
 }
@@ -203,6 +211,21 @@ section {
   -webkit-box-orient: vertical; /* set the orientation of the box to vertical */
   overflow: hidden; /* hide any overflow content */
   text-overflow: ellipsis; /* add dots to the end of the truncated text */
+}
+.truncate {
+  display: -webkit-box; /* set the display type to a webkit box */
+  -webkit-box-orient: vertical; /* set the orientation of the box to vertical */
+  overflow: hidden; /* hide any overflow content */
+  text-overflow: ellipsis; /* add dots to the end of the truncated text */
+}
+.line-clamp-one {
+  -webkit-line-clamp: 1; /* set the maximum number of lines to 2 */
+}
+.line-clamp-two {
+  -webkit-line-clamp: 2; /* set the maximum number of lines to 2 */
+}
+.line-clamp-three {
+  -webkit-line-clamp: 3; /* set the maximum number of lines to 3 */
 }
 
 .br {
