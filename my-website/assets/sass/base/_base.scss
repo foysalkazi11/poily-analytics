@@ -1,35 +1,37 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    // This defines what 1rem is
-    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 
-    @include respond(tab-land) { // width < 1200?
-        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
-    }
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
 
-    @include respond(tab-port) { // width < 900?
-        font-size: 50%; //1 rem = 8px, 8/16 = 50%
-    }
-    
-    @include respond(big-desktop) {
-        font-size: 75%; //1rem = 12, 12/16
-    }
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
 }
 
 body {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ::selection {
-    background-color: $color-primary;
-    color: $color-white;
+  background-color: $color-primary;
+  color: $color-white;
 }
 h1,
 h2,
@@ -37,27 +39,73 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $primary-font;
+  font-family: $primary-font;
 }
-ul ,li{
-    list-style-type: none;
+ul,
+li {
+  list-style-type: none;
 }
 p,
 a {
-    font-family: $secondary-font;
-    text-decoration: none;
+  font-family: $secondary-font;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q,
+blockquote {
+  quotes: none;
+}
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
 }
 
 @media (min-width: 14rem) {
-    .container {
-        max-width: 125rem;
-        margin-right: auto;
-        margin-left: auto;
-    }
+  .container {
+    max-width: 125rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 @media screen and (max-width: 1200px) {
-.container {
+  .container {
     padding-left: 3rem;
     padding-right: 3rem;
-}
+  }
 }

@@ -40,7 +40,14 @@ export default function renderBlogCard(
                   }">${description}</p>
                   <div class="d-flex align-center justify-content-between margin_bottom_10">
                     <div class="d-flex align-center justify-content-center">
-                      <div class="iconBox__authorAvatar"></div>
+                    <div class="iconBox__authorAvatar">
+                     ${
+                       createdBy?.profilePicture
+                         ? `<img  src=${createdBy?.profilePicture} alt="img" >`
+                         : `<div ></div>`
+                     }
+                    </div>
+                   
                       <div class="pl_10">
                         <h4 class="iconBox__authorName">${
                           `${createdBy?.displayName}`.toUpperCase() ||

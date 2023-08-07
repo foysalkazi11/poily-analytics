@@ -1,0 +1,473 @@
+@import "../sass/abstracts/functions";
+@import "../sass/abstracts/mixins";
+@import "../sass/abstracts/variables";
+
+@import "../sass/base/base";
+@import "../sass/base/typography";
+@import "../sass/base/utilities";
+
+@import "../sass/layout/footer";
+@import "../sass/layout/grid";
+@import "../sass/layout/navigation";
+
+@import "../sass/components/button";
+
+// section menu start here
+
+.menuBox {
+  background: $color-white;
+  border: 1px solid $shadowGrey;
+  box-shadow: 0px 44px 106px rgba(217, 217, 217, 0.3);
+  border-radius: 61px;
+  text-align: center;
+  margin-right: 2rem;
+  &:last-child {
+    margin-right: 0px;
+  }
+  @include respond(tab-port) {
+    margin-right: 1rem;
+  }
+  @include respond(phone) {
+    margin-right: 0.5rem;
+  }
+
+  &__text {
+    padding: 0.7rem 2rem;
+    color: $color-drak-greay;
+    font-size: 2rem;
+    @include respond(phone) {
+      padding: 0.7rem 1.5rem;
+    }
+  }
+  &__searchtext {
+    padding: 0.7rem 2rem;
+    color: $color-drak-greay;
+    font-size: 2rem;
+  }
+  &__search_icon {
+    margin-left: 1rem;
+    width: 2rem;
+  }
+}
+.menuBox--right {
+  @include respond(phone) {
+    width: 100%;
+  }
+}
+// section menu end here
+
+// single blog section start here
+
+%sup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.3rem 0 0.5rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid $color-grey;
+  // box-shadow: 0 2px 0 0 rgb(29 32 43 / 15%), 0 4px 12px -3px rgb(29 32 43 / 15%);
+  border-radius: 5px;
+  user-select: none;
+  color: $color-primary;
+}
+
+%span {
+  font-size: inherit;
+  border-bottom: 2px solid #fff;
+  box-shadow: inset 0 -7px 0 0 #e0edd2;
+  transition: box-shadow 0.2s;
+  &:hover {
+    box-shadow: inset 0 -25px 0 0 #eee;
+  }
+
+  &[data-tooltip] {
+    transition: box-shadow 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &[data-tooltip-open] {
+    &[data-tooltip-position="below"] {
+      bottom: 100%;
+    }
+
+    &[data-tooltip-position="above"] {
+      top: 100%;
+    }
+
+    &[data-tooltip-position="right"] {
+      left: 100%;
+    }
+
+    &[data-tooltip-position="left"] {
+      right: 100%;
+    }
+  }
+
+  &[data-tooltip-open]::after {
+    content: attr(data-tooltip);
+    padding: 0px 3px;
+    position: absolute;
+    z-index: 20;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: $color-primary;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -3.5rem;
+  }
+
+  &[data-tooltip-open]::before {
+    content: " ";
+    position: absolute;
+    pointer-events: none;
+    border-width: 5px;
+  }
+
+  &[data-tooltip-open][data-tooltip-position="below"]::before {
+    margin-left: -5px;
+    border-top: 5px solid $color-primary;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    bottom: 100%;
+  }
+
+  &[data-tooltip-open][data-tooltip-position="above"]::before {
+    left: 50%;
+    transform: translateX(0) translateY(-50%);
+    margin-left: -5px;
+    border-top: 5px solid $color-primary;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    top: 0px;
+  }
+
+  &[data-tooltip-open][data-tooltip-position="right"]::before {
+    top: 50%;
+    margin-top: -5px;
+    border-left: 5px solid $color-primary;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    transform: translateX(0) translateY(-50%);
+  }
+
+  &[data-tooltip-open][data-tooltip-position="left"]::before {
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+    margin-top: -5px;
+    border-right: 5px solid $color-primary;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    left: auto;
+  }
+}
+
+%paragraph {
+  font-size: 2rem;
+  color: $color-black;
+  line-height: 3.4rem;
+  font-family: $secondary-font;
+  i:not([data-icon_name]) {
+    font-style: italic;
+  }
+  i:is([data-icon_name]) {
+    color: $color-primary;
+  }
+  b {
+    font-weight: bold;
+  }
+}
+
+%figcaption {
+  @extend %paragraph;
+  font-style: italic;
+  color: $color-grey;
+  font-size: 14px;
+}
+
+%anchor {
+  text-decoration: none;
+  transition: $transition;
+  color: $color-secondary-light;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+%mark {
+  background-color: #e0edd2;
+  color: $color-drak-greay;
+  border-radius: 0.6rem;
+}
+
+.blog_heading1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+}
+.blog_heading2 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+.blog_heading3 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+.blog_heading4 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+.blog_heading5 {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+.blog_heading6 {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.blog_paragraph {
+  @extend %paragraph;
+  a {
+    @extend %anchor;
+  }
+  mark {
+    @extend %mark;
+  }
+  span {
+    @extend %span;
+  }
+  sup {
+    @extend %sup;
+  }
+}
+
+.toggle {
+  .header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 5px;
+
+    .icon {
+      transition: transform linear 0.3s;
+      color: $color-drak-greay;
+    }
+    .iconRotate {
+      transform: rotate(90deg);
+    }
+
+    .text {
+      padding-left: 1rem;
+      font-weight: 500;
+      @extend %paragraph;
+      a {
+        @extend %anchor;
+      }
+      mark {
+        @extend %mark;
+      }
+      span {
+        @extend %span;
+      }
+      sup {
+        @extend %sup;
+      }
+      i:is([data-icon_name]) {
+        color: $color-primary;
+      }
+    }
+  }
+
+  .nestedContainer {
+    padding-left: 1.5rem;
+  }
+}
+
+.blockquote {
+  padding: 1.5rem;
+  background-color: $shadowGrey;
+  border-left: 3px solid $color-primary;
+  margin: 0.5rem 0px;
+  p {
+    @extend %paragraph;
+    a {
+      @extend %anchor;
+    }
+    mark {
+      @extend %mark;
+    }
+  }
+  footer {
+    @extend %figcaption;
+  }
+  sup {
+    @extend %sup;
+  }
+  i:is([data-icon_name]) {
+    color: $color-primary;
+  }
+}
+
+.blog_figure {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 1.5rem;
+  }
+  figcaption {
+    @extend %figcaption;
+  }
+}
+
+.columns {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+
+  @include respond(tab) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.table {
+  margin: 1rem 0;
+  th,
+  td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid $shadowGrey;
+    @extend %paragraph;
+    a {
+      @extend %anchor;
+    }
+    mark {
+      @extend %mark;
+    }
+    span {
+      @extend %span;
+    }
+    sup {
+      @extend %sup;
+    }
+    i:is([data-icon_name]) {
+      color: $color-primary;
+    }
+  }
+
+  /* Custom styles for the table */
+  th {
+    background-color: $lightBgGrey;
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: $lightBgGrey;
+  }
+
+  tr:hover {
+    background-color: $shadowGrey;
+  }
+}
+
+.callout {
+  display: flex;
+  line-height: 1rem;
+  font-size: 1rem;
+  background-color: $color-green-light;
+  border: 1px solid $lightBgGrey;
+  box-shadow: none;
+  white-space: pre;
+  word-wrap: normal;
+  overflow-x: auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  .icon {
+    margin-right: 0.8rem;
+    font-size: 2rem;
+  }
+  .text {
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap;
+    @extend %paragraph;
+    a {
+      @extend %anchor;
+    }
+    mark {
+      @extend %mark;
+    }
+    sup {
+      @extend %sup;
+    }
+    i:is([data-icon_name]) {
+      color: $color-primary;
+    }
+  }
+}
+
+.blog_list {
+  ul,
+  ol {
+    list-style: none;
+    padding-left: 0;
+    li {
+      margin-left: 40px;
+      @extend %paragraph;
+      sup {
+        @extend %sup;
+      }
+      i:is([data-icon_name]) {
+        color: $color-primary;
+      }
+      a {
+        @extend %anchor;
+      }
+      mark {
+        @extend %mark;
+      }
+    }
+  }
+  ol {
+    counter-reset: li;
+  }
+
+  ul li::before {
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+    background-color: $color-secondary-light;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    height: 8px;
+    width: 8px;
+  }
+
+  ol li::before {
+    content: counter(li);
+    color: $color-secondary-light;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    counter-increment: li;
+    font-weight: bold;
+  }
+}
+
+// single blog section end here

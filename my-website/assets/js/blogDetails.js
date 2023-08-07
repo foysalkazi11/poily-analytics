@@ -63,6 +63,16 @@ function getAgeneralBlogBySlug() {
 
       toggleNode(singleBlogDetailsContainer, true);
       toggleNode(loading, false);
+      document.querySelectorAll(".cdx-tooltip").forEach((element) => {
+        element.addEventListener("mouseenter", () => {
+          element.setAttribute("data-tooltip-open", "");
+          setTooltipPosition(element);
+        });
+
+        element.addEventListener("mouseleave", () => {
+          element.removeAttribute("data-tooltip-open");
+        });
+      });
     })
 
     .catch((error) => {
@@ -79,3 +89,36 @@ document.addEventListener("DOMContentLoaded", getAgeneralBlogBySlug);
 //     getBlogList(element.id);
 //   });
 // });
+
+function setTooltipPosition(element) {
+  const tooltip = element;
+  if (!tooltip) return;
+
+  // let position = "";
+
+  // const tooltipRect = tooltip.getBoundingClientRect();
+  // const spaceAbove = tooltipRect.top;
+  // const spaceBelow = window.innerHeight - tooltipRect.bottom;
+  // const spaceLeft = tooltipRect.left;
+  // const spaceRight = window.innerWidth - tooltipRect.right;
+
+  // if (spaceBelow >= tooltipRect.height + 10) {
+  //   position = "below";
+  // } else if (spaceAbove >= tooltipRect.height + 10) {
+  //   position = "above";
+  // } else if (spaceRight >= tooltipRect.width + 10) {
+  //   position = " right";
+  // } else if (spaceLeft >= tooltipRect.width + 10) {
+  //   position = " left";
+  // }
+
+  tooltip.setAttribute("data-tooltip-position", "above");
+}
+
+window.addEventListener("resize", () => {
+  document
+    .querySelectorAll(".cdx-tooltip[data-tooltip-open]")
+    .forEach((element) => {
+      setTooltipPosition(element);
+    });
+});
