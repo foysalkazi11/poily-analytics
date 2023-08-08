@@ -189,6 +189,7 @@
   font-style: italic;
   color: $color-grey;
   font-size: 14px;
+  padding: 0;
 }
 
 %anchor {
@@ -293,7 +294,7 @@
   padding: 1.5rem;
   background-color: $shadowGrey;
   border-left: 3px solid $color-primary;
-  margin: 0.5rem 0px;
+  margin: 1rem 0px;
   p {
     @extend %paragraph;
     a {
@@ -303,7 +304,7 @@
       @extend %mark;
     }
   }
-  footer {
+  &__footer {
     @extend %figcaption;
   }
   sup {
@@ -336,6 +337,7 @@
   display: grid;
   grid-auto-rows: auto;
   grid-gap: 1rem;
+  margin: 1rem 0;
 
   @include respond(tab) {
     grid-template-columns: repeat(2, 1fr);
@@ -387,21 +389,20 @@
 
 .callout {
   display: flex;
-  line-height: 1rem;
-  font-size: 1rem;
+  align-items: center;
   background-color: $color-green-light;
-  border: 1px solid $lightBgGrey;
   box-shadow: none;
   white-space: pre;
   word-wrap: normal;
   overflow-x: auto;
   border-radius: 1rem;
   padding: 1rem;
-  .icon {
+  margin: 1rem 0;
+  &__icon {
     margin-right: 0.8rem;
     font-size: 2rem;
   }
-  .text {
+  &__text {
     margin: 0;
     padding: 0;
     white-space: pre-wrap;

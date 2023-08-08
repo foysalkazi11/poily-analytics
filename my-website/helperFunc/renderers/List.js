@@ -21,7 +21,7 @@ const groups = (tag, items, className = "", align = "left", id) =>
 const list = (block) => {
   const { data, tunes } = block;
   const alignment = tunes?.alignmentTuneTool?.alignment;
-  const align = alignment || left;
+  const align = alignment || "left";
 
   const tag = data?.style === "ordered" ? `ol` : `ul`;
 

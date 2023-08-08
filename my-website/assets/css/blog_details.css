@@ -778,7 +778,7 @@ footer .container-fluid .copyright h4 {
 }
 
 .blog_list ul li sup,
-.blog_list ol li sup, .callout .text sup, .table th sup,
+.blog_list ol li sup, .callout__text sup, .table th sup,
 .table td sup, .blockquote sup, .toggle .header .text sup, .blog_paragraph sup {
   display: inline-flex;
   align-items: center;
@@ -891,50 +891,51 @@ footer .container-fluid .copyright h4 {
 }
 
 .blog_list ul li,
-.blog_list ol li, .callout .text, .table th,
-.table td, .blockquote p, .toggle .header .text, .blog_paragraph, .blog_figure figcaption, .blockquote footer {
+.blog_list ol li, .callout__text, .table th,
+.table td, .blockquote p, .toggle .header .text, .blog_paragraph, .blog_figure figcaption, .blockquote__footer {
   font-size: 2rem;
   color: #000;
   line-height: 3.4rem;
   font-family: "Circe";
 }
 .blog_list ul li i:not([data-icon_name]),
-.blog_list ol li i:not([data-icon_name]), .callout .text i:not([data-icon_name]), .table th i:not([data-icon_name]),
-.table td i:not([data-icon_name]), .blockquote p i:not([data-icon_name]), .toggle .header .text i:not([data-icon_name]), .blog_paragraph i:not([data-icon_name]), .blog_figure figcaption i:not([data-icon_name]), .blockquote footer i:not([data-icon_name]) {
+.blog_list ol li i:not([data-icon_name]), .callout__text i:not([data-icon_name]), .table th i:not([data-icon_name]),
+.table td i:not([data-icon_name]), .blockquote p i:not([data-icon_name]), .toggle .header .text i:not([data-icon_name]), .blog_paragraph i:not([data-icon_name]), .blog_figure figcaption i:not([data-icon_name]), .blockquote__footer i:not([data-icon_name]) {
   font-style: italic;
 }
 .blog_list ul li i:is([data-icon_name]),
-.blog_list ol li i:is([data-icon_name]), .callout .text i:is([data-icon_name]), .table th i:is([data-icon_name]),
-.table td i:is([data-icon_name]), .blockquote p i:is([data-icon_name]), .toggle .header .text i:is([data-icon_name]), .blog_paragraph i:is([data-icon_name]), .blog_figure figcaption i:is([data-icon_name]), .blockquote footer i:is([data-icon_name]) {
+.blog_list ol li i:is([data-icon_name]), .callout__text i:is([data-icon_name]), .table th i:is([data-icon_name]),
+.table td i:is([data-icon_name]), .blockquote p i:is([data-icon_name]), .toggle .header .text i:is([data-icon_name]), .blog_paragraph i:is([data-icon_name]), .blog_figure figcaption i:is([data-icon_name]), .blockquote__footer i:is([data-icon_name]) {
   color: #7cbc39;
 }
 .blog_list ul li b,
-.blog_list ol li b, .callout .text b, .table th b,
-.table td b, .blockquote p b, .toggle .header .text b, .blog_paragraph b, .blog_figure figcaption b, .blockquote footer b {
+.blog_list ol li b, .callout__text b, .table th b,
+.table td b, .blockquote p b, .toggle .header .text b, .blog_paragraph b, .blog_figure figcaption b, .blockquote__footer b {
   font-weight: bold;
 }
 
-.blog_figure figcaption, .blockquote footer {
+.blog_figure figcaption, .blockquote__footer {
   font-style: italic;
   color: #cbcbcb;
   font-size: 14px;
+  padding: 0;
 }
 
 .blog_list ul li a,
-.blog_list ol li a, .callout .text a, .table th a,
+.blog_list ol li a, .callout__text a, .table th a,
 .table td a, .blockquote p a, .toggle .header .text a, .blog_paragraph a {
   text-decoration: none;
   transition: all 0.3s;
   color: #fe5717;
 }
 .blog_list ul li a:hover,
-.blog_list ol li a:hover, .callout .text a:hover, .table th a:hover,
+.blog_list ol li a:hover, .callout__text a:hover, .table th a:hover,
 .table td a:hover, .blockquote p a:hover, .toggle .header .text a:hover, .blog_paragraph a:hover {
   text-decoration: underline;
 }
 
 .blog_list ul li mark,
-.blog_list ol li mark, .callout .text mark, .table th mark,
+.blog_list ol li mark, .callout__text mark, .table th mark,
 .table td mark, .blockquote p mark, .toggle .header .text mark, .blog_paragraph mark {
   background-color: #e0edd2;
   color: #4d4d4d;
@@ -999,7 +1000,7 @@ footer .container-fluid .copyright h4 {
   padding: 1.5rem;
   background-color: #ececec;
   border-left: 3px solid #7cbc39;
-  margin: 0.5rem 0px;
+  margin: 1rem 0px;
 }
 .blockquote i:is([data-icon_name]) {
   color: #7cbc39;
@@ -1023,6 +1024,7 @@ footer .container-fluid .copyright h4 {
   display: grid;
   grid-auto-rows: auto;
   grid-gap: 1rem;
+  margin: 1rem 0;
 }
 @media only screen and (max-width: 48em) {
   .columns {
@@ -1062,27 +1064,26 @@ footer .container-fluid .copyright h4 {
 
 .callout {
   display: flex;
-  line-height: 1rem;
-  font-size: 1rem;
+  align-items: center;
   background-color: #f2ffe4;
-  border: 1px solid #f6f6f6;
   box-shadow: none;
   white-space: pre;
   word-wrap: normal;
   overflow-x: auto;
   border-radius: 1rem;
   padding: 1rem;
+  margin: 1rem 0;
 }
-.callout .icon {
+.callout__icon {
   margin-right: 0.8rem;
   font-size: 2rem;
 }
-.callout .text {
+.callout__text {
   margin: 0;
   padding: 0;
   white-space: pre-wrap;
 }
-.callout .text i:is([data-icon_name]) {
+.callout__text i:is([data-icon_name]) {
   color: #7cbc39;
 }
 

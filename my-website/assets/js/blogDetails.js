@@ -82,7 +82,6 @@ function getAgeneralBlogBySlug() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", getAgeneralBlogBySlug);
 // window.onload = getBlogList;
 // getAllFiltersMenu.forEach((element) => {
 //   element.addEventListener("click", () => {
@@ -121,4 +120,11 @@ window.addEventListener("resize", () => {
     .forEach((element) => {
       setTooltipPosition(element);
     });
+});
+document.addEventListener("DOMContentLoaded", getAgeneralBlogBySlug);
+
+getAllFiltersMenu.forEach((element) => {
+  element.addEventListener("click", () => {
+    window.location.href = `blog.html?category=${element.id}`;
+  });
 });

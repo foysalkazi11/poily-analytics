@@ -1,10 +1,9 @@
-import HTMLParser from "./HTMLParser.js";
 import handleBlockData from "./useBlock.js";
 
 const paragraph = (block) => {
   const { data, tunes } = block;
   const alignment = tunes?.alignmentTuneTool?.alignment;
-  const align = alignment || left;
+  const align = alignment || "left";
 
   return `<p
           class="blog_paragraph"
