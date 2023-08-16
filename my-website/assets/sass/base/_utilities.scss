@@ -244,3 +244,21 @@ section {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.popup {
+  position: absolute;
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  opacity: 0.9;
+  transition: opacity 0.5s;
+  font-size: 1.2rem;
+  // transform: translate(-50%, -100%); /* Position above the target element */
+}

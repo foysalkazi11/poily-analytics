@@ -61,7 +61,10 @@ export default function renderBlogCard(
                     </div>
                     <div class="d-flex align-center">
                       <div class="iconBox d-flex align-center justify-content-center">
-                        <img src="./assets/img/share.svg" class="iconBox__icon" alt="icon">
+                      <div data-slug=${slug}  class="iconBox__icon d-flex align-center justify-content-center transition-all cursor-pointer">
+                       <img src="./assets/img/share.svg"  alt="icon">
+                      </div>
+                       
                       </div>
                     
                     </div>

@@ -21,6 +21,7 @@ const allBlogsContainer = document.getElementById("all-blogs-container");
 const divider = document.getElementById("br");
 const noBlogFound = document.getElementById("no_blog_found");
 const URL = "https://srcblending-production.up.railway.app/graphql";
+const BASE_URL = "https://www.poily.com/poily_analytics";
 
 // fetch blog list and render
 function getBlogList(category = null) {
@@ -85,6 +86,7 @@ function getBlogList(category = null) {
 
       toggleNode(loading, false);
       toggleNode(blogListContainer, true);
+      addEventListenerToShareIcon();
     })
 
     .catch((error) => {
@@ -111,3 +113,54 @@ getAllFiltersMenu.forEach((element) => {
     getBlogList();
   });
 });
+
+// Function to copy text to clipboard
+function copyToClipboard(text) {
+  const textField = document.createElement("textarea");
+  textField.value = text;
+  document.body.appendChild(textField);
+  textField.select();
+  document.execCommand("copy");
+  document.body.removeChild(textField);
+}
+
+// show popup
+function showPopup(message, targetElement) {
+  const popup = document.createElement("div");
+  popup.className = "popup";
+  popup.textContent = message;
+  popup.style.visibility = "hidden";
+  document.body.appendChild(popup);
+  const top = targetElement.offsetTop - targetElement.clientHeight;
+  const left = targetElement.offsetLeft - popup.clientWidth / 2;
+  popup.style.left = `${left + 16}px`; // Adjust the positioning as needed
+  popup.style.top = `${top - 10}px`; // Position at the center of the icon
+  popup.style.visibility = "visible";
+
+  setTimeout(() => {
+    document.body.removeChild(popup);
+  }, 1000);
+}
+
+// add event listeners to share icon
+const addEventListenerToShareIcon = () => {
+  // Get the copy button element
+  const shareButtons = document.querySelectorAll(".iconBox__icon");
+
+  shareButtons.forEach((element) => {
+    // Add click event listener to the copy button
+    element.addEventListener("click", (event) => {
+      let target = event.target;
+      if (target.tagName === "IMG" && target.parentElement) {
+        target = target.parentElement;
+      }
+      // Get the current URL
+      const currentURL = `${BASE_URL}/blogDetails.html?blogSlug=${target?.dataset?.slug}`;
+
+      // Copy the URL to clipboard
+      copyToClipboard(currentURL);
+      // Show the popup
+      showPopup("Copied!", target);
+    });
+  });
+};
