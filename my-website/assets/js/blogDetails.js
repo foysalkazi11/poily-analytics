@@ -6,7 +6,7 @@ import getQueryStringByQueryName from "../../helperFunc/renderers/getQueryString
 import toggleNode from "../../helperFunc/toggleNode.js";
 
 const loading = document.getElementById("loading");
-const error = document.getElementById("error");
+const error = document.getElementById("no_blog_found");
 const singleBlogDetailsContainer = document.getElementById(
   "single-blog-details"
 );
@@ -41,6 +41,12 @@ function getAgeneralBlogBySlug() {
     .then((response) => response.json())
     .then((data) => {
       const detailsABlog = data?.data?.getAgeneralBlogBySlug;
+      if (!detailsABlog) {
+        toggleNode(error, true);
+        toggleNode(loading, false);
+        toggleNode(singleBlogDetailsContainer, false);
+        return;
+      }
       const parsedBody = JSON.parse(detailsABlog?.body);
       makeInnerHtmlEmpty(singleBlogDetailsContainer);
       makeInnerHtmlEmpty(title);
