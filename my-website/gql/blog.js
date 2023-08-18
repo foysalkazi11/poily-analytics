@@ -1,6 +1,6 @@
 export const GET_ALL_GENERAL_BLOG = `
-  query GetAllGeneralBlog($currentDate: String!, $brand: String, $category: String) {
- getAllGeneralBlog(currentDate: $currentDate, brand: $brand, category: $category) {
+  query GetAllGeneralBlog($currentDate: String!, $brand: String, $category: String, $withPublished: Boolean) {
+ getAllGeneralBlog(currentDate: $currentDate, brand: $brand, category: $category, withPublished: $withPublished) {
      _id
       title
       slug
@@ -10,6 +10,7 @@ export const GET_ALL_GENERAL_BLOG = `
       category
       collections
       isPublished
+      publishDate
       createdAt
       body
       createdBy {

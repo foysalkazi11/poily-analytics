@@ -15,10 +15,13 @@ export default function renderBlogCard(
     category,
     collections,
     isPublished,
+    publishDate,
     createdAt,
     createdBy,
   } = blogData;
-  const data = formatDate(new Date(createdAt));
+  const data = publishDate
+    ? formatDate(new Date(publishDate))
+    : { day: "", month: "", year: "" };
 
   const html = `
            <div class="blog_card ${modifyCard && "blog_card--row"}">
@@ -53,9 +56,14 @@ export default function renderBlogCard(
                           `${createdBy?.displayName}`.toUpperCase() ||
                           `${createdBy?.firstName} ${createdBy?.lastName}`.toUpperCase()
                         }</h4>
-                        <p class="iconBox__authorPostDate">${data.month} ${
-    data.day
-  }, ${data.year}</p>
+                        ${
+                          publishDate
+                            ? `<p class="iconBox__authorPostDate">
+                               ${data.day} ${data.month}, ${data.year}
+                            </p>`
+                            : ""
+                        }
+                        
                       </div>
 
                     </div>

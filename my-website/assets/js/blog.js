@@ -33,6 +33,7 @@ function getBlogList(category = null) {
     currentDate: new Date().toISOString().slice(0, 10),
     brand: "643e2a567ce212e372cbfb69",
     category: getCategoryUrl === "all" ? "" : getCategoryUrl,
+    withPublished: true,
   };
   toggleNode(noBlogFound, false);
   toggleNode(singleBlogDetailsContainer, false);
