@@ -1,4 +1,6 @@
 import { GET_A_GENERAL_BLOG_BY_SLUG } from "../../gql/blog.js";
+import authorInfo from "../../helperFunc/authorInfo.js";
+import formatDate from "../../helperFunc/formateData.js";
 import jsonToHtml from "../../helperFunc/jsonToHtml.js";
 import makeInnerHtmlEmpty from "../../helperFunc/makeInnerHtmlEmpty.js";
 import renderImage from "../../helperFunc/renderImage.js";
@@ -12,6 +14,7 @@ const singleBlogDetailsContainer = document.getElementById(
 );
 const title = document.querySelector(".banner__title__secondary");
 const description = document.querySelector(".paragraph-primary");
+const authorInfoBox = document.querySelector(".iconBox");
 const getAllFiltersMenu = document.querySelectorAll(".menuBox__text");
 const URL = "https://srcblending-production.up.railway.app/graphql";
 
@@ -56,6 +59,21 @@ function getAgeneralBlogBySlug() {
       title.textContent = detailsABlog?.title;
       // render description
       description.textContent = detailsABlog?.description;
+      // render author info
+
+      // formate date
+      const date = detailsABlog?.publishDate
+        ? formatDate(new Date(detailsABlog?.publishDate))
+        : { day: "", month: "", year: "" };
+
+      authorInfoBox.innerHTML = authorInfo(
+        detailsABlog?.createdBy?.profilePicture,
+        detailsABlog?.createdBy?.displayName ||
+          `${detailsABlog?.createdBy?.firstName} ${detailsABlog?.createdBy?.lastName}`,
+        detailsABlog?.publishDate
+          ? `${date?.day} ${date?.month}, ${date?.year}`
+          : ""
+      );
 
       // render cover image
       const coverImage = renderImage(detailsABlog?.coverImage);

@@ -1,3 +1,4 @@
+import authorInfo from "./authorInfo.js";
 import formatDate from "./formateData.js";
 
 export default function renderBlogCard(
@@ -28,45 +29,28 @@ export default function renderBlogCard(
                   <img src=${coverImage} class="img" alt="img">
                   <div class="${modifyCard && "margin_left_20"}">
                    <a href="blogDetails.html?blogSlug=${slug}" > <h1 id=${slug} class="${
-    allBlogPost ? "blog_card_heading_all_blog" : "blog_card_heading"
-  } cursor-pointer margin_top_10 margin_bottom_10 ${
+    allBlogPost
+      ? "blog_card_heading_all_blog margin_top_10"
+      : "blog_card_heading"
+  } cursor-pointer margin_bottom_10 ${
     allBlogPost
       ? "truncate line-clamp-one"
       : modifyCard
       ? "truncate line-clamp-three"
-      : "truncate_two_tine"
+      : "truncate line-clamp-two"
   }">${title}</h1></a>
                   <p class="blog_card_description margin_bottom_10 ${
-                    modifyCard
-                      ? "truncate line-clamp-three"
-                      : "truncate_two_tine"
+                    modifyCard || allBlogPost
+                      ? "truncate line-clamp-four"
+                      : "truncate line-clamp-three"
                   }">${description}</p>
                   <div class="d-flex align-center justify-content-between margin_bottom_10">
-                    <div class="d-flex align-center justify-content-center">
-                    <div class="iconBox__authorAvatar">
-                     ${
-                       createdBy?.profilePicture
-                         ? `<img  src=${createdBy?.profilePicture} alt="img" >`
-                         : `<div ></div>`
-                     }
-                    </div>
-                   
-                      <div class="pl_10">
-                        <h4 class="iconBox__authorName">${
-                          `${createdBy?.displayName}`.toUpperCase() ||
-                          `${createdBy?.firstName} ${createdBy?.lastName}`.toUpperCase()
-                        }</h4>
-                        ${
-                          publishDate
-                            ? `<p class="iconBox__authorPostDate">
-                               ${data.day} ${data.month}, ${data.year}
-                            </p>`
-                            : ""
-                        }
-                        
-                      </div>
-
-                    </div>
+                  ${authorInfo(
+                    createdBy?.profilePicture,
+                    createdBy?.displayName ||
+                      `${createdBy?.firstName} ${createdBy?.lastName}`,
+                    publishDate ? `${data.day} ${data.month}, ${data.year}` : ""
+                  )}
                     <div class="d-flex align-center">
                       <div class="iconBox d-flex align-center justify-content-center">
                       <div data-slug=${slug}  class="iconBox__icon d-flex align-center justify-content-center transition-all cursor-pointer">

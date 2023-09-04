@@ -329,12 +329,21 @@ section {
 }
 
 .max__80 {
+  max-width: 80%;
+  margin: auto;
+}
+@media only screen and (max-width: 56.25em) {
+  .max__80 {
+    max-width: 100%;
+  }
+}
+
+.max__65 {
   max-width: 65%;
   margin: auto;
 }
-
 @media only screen and (max-width: 56.25em) {
-  .max__80 {
+  .max__65 {
     max-width: 100%;
   }
 }
@@ -454,9 +463,11 @@ section {
 }
 
 .card-grid .card:after {
-  background: linear-gradient(to bottom,
-      rgba(255, 255, 255, 0) -10%,
-      #fff 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) -10%,
+    #fff 100%
+  );
   bottom: -0.1rem;
   content: "";
   display: block;
@@ -478,10 +489,9 @@ section {
   padding: 1.5rem;
   position: absolute;
   top: 0;
-  transition: all 0.30s;
+  transition: all 0.3s;
   transition-property: max-height, min-height, box-shadow, background-color;
   border-radius: 2rem;
-
 }
 
 .card-grid .card .card-content .card-title {
@@ -504,8 +514,8 @@ section {
   margin-bottom: 0;
 }
 
-.card>a:hover .card-content,
-.card>a:focus .card-content {
+.card > a:hover .card-content,
+.card > a:focus .card-content {
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.16),
     0 0.2rem 1rem 0 rgba(0, 0, 0, 0.12);
   max-height: 27.5rem;
@@ -515,7 +525,7 @@ section {
     border-color 0.2s;
   z-index: 10000;
   border: 0.1rem solid #7cbc39;
-  transition: 0.30s;
+  transition: 0.3s;
 }
 
 .card-grid:hover .card:not(:hover) {
@@ -1248,8 +1258,6 @@ footer .container-fluid .copyright h4 {
   }
 }
 
-
-
 /* .why_card {
   background: #FFFFFF;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.08);
@@ -1257,7 +1265,6 @@ footer .container-fluid .copyright h4 {
   padding: 40px;
   box-sizing: border-box;
 } */
-
 
 .why__new .container-fluid {
   width: 95%;
@@ -1268,7 +1275,6 @@ footer .container-fluid .copyright h4 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
 .card-ct {
@@ -1280,7 +1286,6 @@ footer .container-fluid .copyright h4 {
   transition: opacity 0.3s ease-out;
   width: 28%;
   position: relative;
-
 }
 
 .card-ct::before {
@@ -1301,7 +1306,11 @@ footer .container-fluid .copyright h4 {
 }
 
 .card-ct::after {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) -10%, white 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) -10%,
+    white 100%
+  );
   bottom: -0.1rem;
   content: "";
   display: block;
@@ -1333,10 +1342,10 @@ footer .container-fluid .copyright h4 {
   top: 0;
   transition: all 0.3s;
   transition-property: max-height, min-height, box-shadow, background-color;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 0.4rem 1.4rem rgba(0, 0, 0, 0.08);
   border-radius: 1.5rem;
-  transition: max-height 0.30s, min-height 0.30s;
+  transition: max-height 0.3s, min-height 0.3s;
 }
 
 .card-ct .card-content .card-title {
@@ -1355,14 +1364,16 @@ footer .container-fluid .copyright h4 {
   margin-bottom: 0;
 }
 
-.card-ct>a:hover .card-content,
-.card-ct>a:focus .card-content {
+.card-ct > a:hover .card-content,
+.card-ct > a:focus .card-content {
   border-color: #409bd2;
-  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.16), 0 0.2rem 1rem 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.16),
+    0 0.2rem 1rem 0 rgba(0, 0, 0, 0.12);
   max-height: 72rem;
   min-height: auto;
   overflow: auto;
-  transition: max-height 0.3s 0.5s, min-height 0.3s 0.5s, box-shadow 0.5s 0.4s, border-color 0.2s;
+  transition: max-height 0.3s 0.5s, min-height 0.3s 0.5s, box-shadow 0.5s 0.4s,
+    border-color 0.2s;
   z-index: 10000;
 }
 
@@ -1373,10 +1384,10 @@ footer .container-fluid .copyright h4 {
 @media only screen and (max-width: 90em) {
   .card-ct::before {
     right: -12.1rem;
-}
-.card-ct:nth-child(2)::before {
-  right: -166px;
-}
+  }
+  .card-ct:nth-child(2)::before {
+    right: -166px;
+  }
 }
 @media only screen and (max-width: 75em) {
   .card-ct {
@@ -1392,7 +1403,6 @@ footer .container-fluid .copyright h4 {
     display: none;
   }
   .section_banner {
-    background: linear-gradient(0deg, #f9f9f9 0%, #dff8ff 101.95%); 
+    background: linear-gradient(0deg, #f9f9f9 0%, #dff8ff 101.95%);
   }
-  
 }

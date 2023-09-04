@@ -21,6 +21,9 @@
   border-radius: 61px;
   text-align: center;
   margin-right: 2rem;
+  &:hover {
+    background-color: $shadowGrey;
+  }
   &:last-child {
     margin-right: 0px;
   }
@@ -56,6 +59,48 @@
 }
 // section menu end here
 
+// single blog heading section start here
+.iconBox {
+  background: $color-white;
+
+  // box-shadow: 0px 2px 2px;
+  // &__icon {
+  //   visibility: hidden;
+  //   border: 1px solid $color-grey;
+  //   width: 3rem;
+  //   height: 3rem;
+  //   border-radius: 50%;
+  //   object-fit: cover;
+  //   &:hover {
+  //     background-color: $shadowGrey;
+  //   }
+  //   img {
+  //     width: 1rem;
+  //   }
+  // }
+
+  &__authorAvatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: $color-grey;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  &__authorName {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  &__authorPostDate {
+    font-size: 1.4rem;
+    color: $lightTextColor;
+  }
+}
+// single blog heading section end here
 // single blog section start here
 
 %sup {
@@ -171,7 +216,7 @@
 %paragraph {
   font-size: 2rem;
   color: $color-black;
-  line-height: 3.4rem;
+  line-height: 2.8rem;
   font-family: $secondary-font;
   i:not([data-icon_name]) {
     font-style: italic;
@@ -429,6 +474,8 @@
     padding-left: 0;
     li {
       margin-left: 40px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
       @extend %paragraph;
       sup {
         @extend %sup;

@@ -21,6 +21,9 @@
   border-radius: 61px;
   text-align: center;
   margin-right: 2rem;
+  &:hover {
+    background-color: $shadowGrey;
+  }
   &:last-child {
     margin-right: 0px;
   }
@@ -92,7 +95,7 @@
   }
   &_description {
     font-size: 2rem;
-    line-height: 3.1rem;
+    line-height: 2.8rem;
   }
   .iconBox {
     background: $color-white;

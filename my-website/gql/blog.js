@@ -40,6 +40,7 @@ query GetAgeneralBlogBySlug($memberId: ID, $slug: String!) {
       createdAt
       body
       keywords
+      publishDate
       createdBy {
         _id
         displayName

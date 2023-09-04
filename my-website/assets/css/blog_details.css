@@ -390,12 +390,20 @@ section {
   padding-bottom: 1rem;
 }
 
-.padding_bottom--50 {
-  padding-bottom: 5rem;
-}
-
 .padding_bottom--20 {
   padding-bottom: 2rem;
+}
+
+.padding_bottom--30 {
+  padding-bottom: 3rem;
+}
+
+.padding_bottom--40 {
+  padding-bottom: 4rem;
+}
+
+.padding_bottom--50 {
+  padding-bottom: 5rem;
 }
 
 .padding_top_20 {
@@ -443,11 +451,21 @@ section {
 }
 
 .max__80 {
-  max-width: 65%;
+  max-width: 80%;
   margin: auto;
 }
 @media only screen and (max-width: 56.25em) {
   .max__80 {
+    max-width: 100%;
+  }
+}
+
+.max__65 {
+  max-width: 65%;
+  margin: auto;
+}
+@media only screen and (max-width: 56.25em) {
+  .max__65 {
     max-width: 100%;
   }
 }
@@ -460,14 +478,6 @@ section {
   .max__50 {
     max-width: 100%;
   }
-}
-
-.truncate_two_tine {
-  display: -webkit-box; /* set the display type to a webkit box */
-  -webkit-line-clamp: 2; /* set the maximum number of lines to 2 */
-  -webkit-box-orient: vertical; /* set the orientation of the box to vertical */
-  overflow: hidden; /* hide any overflow content */
-  text-overflow: ellipsis; /* add dots to the end of the truncated text */
 }
 
 .truncate {
@@ -487,6 +497,10 @@ section {
 
 .line-clamp-three {
   -webkit-line-clamp: 3; /* set the maximum number of lines to 3 */
+}
+
+.line-clamp-four {
+  -webkit-line-clamp: 4; /* set the maximum number of lines to 4 */
 }
 
 .br {
@@ -755,6 +769,9 @@ footer .container-fluid .copyright h4 {
   text-align: center;
   margin-right: 2rem;
 }
+.menuBox:hover {
+  background-color: #ececec;
+}
 .menuBox:last-child {
   margin-right: 0px;
 }
@@ -792,6 +809,31 @@ footer .container-fluid .copyright h4 {
   .menuBox--right {
     width: 100%;
   }
+}
+
+.iconBox {
+  background: #fff;
+}
+.iconBox__authorAvatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #cbcbcb;
+}
+.iconBox__authorAvatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.iconBox__authorName {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.iconBox__authorPostDate {
+  font-size: 1.4rem;
+  color: #666666;
 }
 
 .blog_list ul li sup,
@@ -912,7 +954,7 @@ footer .container-fluid .copyright h4 {
 .table td, .blockquote p, .toggle .header .text, .blog_paragraph, .blog_figure figcaption, .blockquote__footer {
   font-size: 2rem;
   color: #000;
-  line-height: 3.4rem;
+  line-height: 2.8rem;
   font-family: "Circe";
 }
 .blog_list ul li i:not([data-icon_name]),
@@ -1112,6 +1154,8 @@ footer .container-fluid .copyright h4 {
 .blog_list ul li,
 .blog_list ol li {
   margin-left: 40px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .blog_list ul li i:is([data-icon_name]),
 .blog_list ol li i:is([data-icon_name]) {
