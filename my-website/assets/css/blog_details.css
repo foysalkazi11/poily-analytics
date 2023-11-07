@@ -143,6 +143,18 @@ summary {
     padding-right: 3rem;
   }
 }
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
 .banner__title {
   font-size: 6rem;
   line-height: 1.2;
@@ -179,6 +191,7 @@ summary {
 @media only screen and (max-width: 35.5em) {
   .banner__title__secondary {
     font-size: 3.3rem;
+    text-align: left;
   }
 }
 
@@ -189,11 +202,16 @@ summary {
   color: #000;
   display: inline-block;
 }
+@media only screen and (max-width: 35.5em) {
+  .heading-primary {
+    text-align: left;
+  }
+}
 
 .paragraph-primary {
   font-weight: 400;
   font-size: 2.4rem;
-  line-height: 1.2;
+  line-height: 1.5;
   text-align: center;
   color: #4d4d4d;
 }
@@ -203,6 +221,9 @@ summary {
   }
 }
 @media only screen and (max-width: 35.5em) {
+  .paragraph-primary {
+    text-align: left;
+  }
   .paragraph-primary br {
     display: none;
   }
@@ -813,10 +834,12 @@ footer .container-fluid .copyright h4 {
 
 .iconBox {
   background: #fff;
+  display: flex;
+  justify-content: center;
 }
 .iconBox__authorAvatar {
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -828,12 +851,17 @@ footer .container-fluid .copyright h4 {
   border-radius: 50%;
 }
 .iconBox__authorName {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 .iconBox__authorPostDate {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #666666;
+}
+@media only screen and (max-width: 37.5em) {
+  .iconBox {
+    justify-content: flex-start;
+  }
 }
 
 .blog_list ul li sup,
@@ -949,26 +977,23 @@ footer .container-fluid .copyright h4 {
   left: auto;
 }
 
-.blog_list ul li,
-.blog_list ol li, .callout__text, .table th,
+.callout__text, .table th,
 .table td, .blockquote p, .toggle .header .text, .blog_paragraph, .blog_figure figcaption, .blockquote__footer {
   font-size: 2rem;
   color: #000;
   line-height: 2.8rem;
   font-family: "Circe";
+  padding: 1rem 0;
 }
-.blog_list ul li i:not([data-icon_name]),
-.blog_list ol li i:not([data-icon_name]), .callout__text i:not([data-icon_name]), .table th i:not([data-icon_name]),
+.callout__text i:not([data-icon_name]), .table th i:not([data-icon_name]),
 .table td i:not([data-icon_name]), .blockquote p i:not([data-icon_name]), .toggle .header .text i:not([data-icon_name]), .blog_paragraph i:not([data-icon_name]), .blog_figure figcaption i:not([data-icon_name]), .blockquote__footer i:not([data-icon_name]) {
   font-style: italic;
 }
-.blog_list ul li i:is([data-icon_name]),
-.blog_list ol li i:is([data-icon_name]), .callout__text i:is([data-icon_name]), .table th i:is([data-icon_name]),
+.callout__text i:is([data-icon_name]), .table th i:is([data-icon_name]),
 .table td i:is([data-icon_name]), .blockquote p i:is([data-icon_name]), .toggle .header .text i:is([data-icon_name]), .blog_paragraph i:is([data-icon_name]), .blog_figure figcaption i:is([data-icon_name]), .blockquote__footer i:is([data-icon_name]) {
   color: #7cbc39;
 }
-.blog_list ul li b,
-.blog_list ol li b, .callout__text b, .table th b,
+.callout__text b, .table th b,
 .table td b, .blockquote p b, .toggle .header .text b, .blog_paragraph b, .blog_figure figcaption b, .blockquote__footer b {
   font-weight: bold;
 }
@@ -1153,9 +1178,24 @@ footer .container-fluid .copyright h4 {
 }
 .blog_list ul li,
 .blog_list ol li {
-  margin-left: 40px;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  margin-left: 3rem;
+  font-size: 2rem;
+  color: #000;
+  line-height: 2.8rem;
+  font-family: "Circe";
+  padding: 0.5rem 0;
+}
+.blog_list ul li i:not([data-icon_name]),
+.blog_list ol li i:not([data-icon_name]) {
+  font-style: italic;
+}
+.blog_list ul li i:is([data-icon_name]),
+.blog_list ol li i:is([data-icon_name]) {
+  color: #7cbc39;
+}
+.blog_list ul li b,
+.blog_list ol li b {
+  font-weight: bold;
 }
 .blog_list ul li i:is([data-icon_name]),
 .blog_list ol li i:is([data-icon_name]) {

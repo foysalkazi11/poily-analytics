@@ -143,6 +143,18 @@ summary {
     padding-right: 3rem;
   }
 }
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
 .banner__title {
   font-size: 6rem;
   line-height: 1.2;
@@ -179,6 +191,7 @@ summary {
 @media only screen and (max-width: 35.5em) {
   .banner__title__secondary {
     font-size: 3.3rem;
+    text-align: left;
   }
 }
 
@@ -189,11 +202,16 @@ summary {
   color: #000;
   display: inline-block;
 }
+@media only screen and (max-width: 35.5em) {
+  .heading-primary {
+    text-align: left;
+  }
+}
 
 .paragraph-primary {
   font-weight: 400;
   font-size: 2.4rem;
-  line-height: 1.2;
+  line-height: 1.5;
   text-align: center;
   color: #4d4d4d;
 }
@@ -203,6 +221,9 @@ summary {
   }
 }
 @media only screen and (max-width: 35.5em) {
+  .paragraph-primary {
+    text-align: left;
+  }
   .paragraph-primary br {
     display: none;
   }
@@ -867,8 +888,8 @@ footer .container-fluid .copyright h4 {
   width: 1rem;
 }
 .blog_card .iconBox__authorAvatar {
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -880,11 +901,11 @@ footer .container-fluid .copyright h4 {
   border-radius: 50%;
 }
 .blog_card .iconBox__authorName {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 .blog_card .iconBox__authorPostDate {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #666666;
 }
 

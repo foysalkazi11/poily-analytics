@@ -23,6 +23,7 @@
   color: $color-secondary-light;
   @include respond(sm-phone) {
     font-size: 3.3rem;
+    text-align: left;
   }
 }
 
@@ -32,18 +33,22 @@
   line-height: 1;
   color: $color-black;
   display: inline-block;
+  @include respond(sm-phone) {
+    text-align: left;
+  }
 }
 
 .paragraph-primary {
   font-weight: 400;
   font-size: 2.4rem;
-  line-height: 1.2;
+  line-height: 1.5;
   text-align: center;
   color: $color-drak-greay;
   @include respond(laptop) {
     font-size: 2rem;
   }
   @include respond(sm-phone) {
+    text-align: left;
     br {
       display: none;
     }
