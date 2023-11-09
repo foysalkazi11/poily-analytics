@@ -12,6 +12,7 @@ export const GET_ALL_GENERAL_BLOG = `
       isPublished
       publishDate
       createdAt
+      updatedAt
       body
       createdBy {
         _id
@@ -38,6 +39,7 @@ query GetAgeneralBlogBySlug($memberId: ID, $slug: String!) {
       collections
       isPublished
       createdAt
+      updatedAt
       body
       keywords
       publishDate

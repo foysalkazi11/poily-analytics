@@ -18,10 +18,11 @@ export default function renderBlogCard(
     isPublished,
     publishDate,
     createdAt,
+    updatedAt,
     createdBy,
   } = blogData;
-  const data = publishDate
-    ? formatDate(new Date(publishDate))
+  const data = updatedAt
+    ? formatDate(new Date(updatedAt))
     : { day: "", month: "", year: "" };
 
   const html = `
@@ -49,7 +50,7 @@ export default function renderBlogCard(
                     createdBy?.profilePicture,
                     createdBy?.displayName ||
                       `${createdBy?.firstName} ${createdBy?.lastName}`,
-                    publishDate ? `${data.day} ${data.month}, ${data.year}` : ""
+                    updatedAt ? `${data.day} ${data.month}, ${data.year}` : ""
                   )}
                     <div class="d-flex align-center">
                       <div class="iconBox d-flex align-center justify-content-center">

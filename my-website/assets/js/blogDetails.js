@@ -62,15 +62,15 @@ function getAgeneralBlogBySlug() {
       // render author info
 
       // formate date
-      const date = detailsABlog?.publishDate
-        ? formatDate(new Date(detailsABlog?.publishDate))
+      const date = detailsABlog?.updatedAt
+        ? formatDate(new Date(detailsABlog?.updatedAt))
         : { day: "", month: "", year: "" };
 
       authorInfoBox.innerHTML = authorInfo(
         detailsABlog?.createdBy?.profilePicture,
         detailsABlog?.createdBy?.displayName ||
           `${detailsABlog?.createdBy?.firstName} ${detailsABlog?.createdBy?.lastName}`,
-        detailsABlog?.publishDate
+        detailsABlog?.updatedAt
           ? `${date?.day} ${date?.month}, ${date?.year}`
           : ""
       );
