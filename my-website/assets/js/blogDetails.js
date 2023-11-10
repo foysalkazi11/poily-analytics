@@ -55,6 +55,14 @@ function getAgeneralBlogBySlug() {
       makeInnerHtmlEmpty(title);
       makeInnerHtmlEmpty(description);
 
+      const metaTagsInfo = {
+        title: detailsABlog?.title,
+        description: detailsABlog?.description,
+        image: detailsABlog?.coverImage,
+        url: window?.location?.href,
+      };
+      // change metaTagsInfo
+      setMetaTagsInfo(metaTagsInfo);
       // render title
       title.textContent = detailsABlog?.title;
       // render description
@@ -136,6 +144,46 @@ function setTooltipPosition(element) {
   // }
 
   tooltip.setAttribute("data-tooltip-position", "above");
+}
+
+function setMetaTagsInfo({ title, description, image, url }) {
+  //generate meta tags
+  document.title = title;
+
+  document?.head
+    ?.querySelector(`meta[name="title"]`)
+    ?.setAttribute("content", title);
+  document?.head
+    ?.querySelector(`meta[name="description"]`)
+    ?.setAttribute("content", description);
+
+  // Open Graph / Facebook
+  document?.head
+    ?.querySelector(`meta[property="og:title"]`)
+    ?.setAttribute("content", title);
+  document?.head
+    ?.querySelector(`meta[property="og:description"]`)
+    ?.setAttribute("content", description);
+  document?.head
+    ?.querySelector(`meta[property="og:image"]`)
+    ?.setAttribute("content", image);
+  document?.head
+    ?.querySelector(`meta[property="og:url"]`)
+    ?.setAttribute("content", url);
+
+  // twitter
+  document?.head
+    ?.querySelector(`meta[property="twitter:title"]`)
+    ?.setAttribute("content", title);
+  document?.head
+    ?.querySelector(`meta[property="twitter:description"]`)
+    ?.setAttribute("content", description);
+  document?.head
+    ?.querySelector(`meta[property="twitter:image"]`)
+    ?.setAttribute("content", image);
+  document?.head
+    ?.querySelector(`meta[property="twitter:url"]`)
+    ?.setAttribute("content", url);
 }
 
 window.addEventListener("resize", () => {
