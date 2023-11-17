@@ -903,26 +903,10 @@ footer .container-fluid .copyright h4 {
   position: relative;
   cursor: pointer;
 }
-.table th span[data-tooltip-open][data-tooltip-position=below],
-.table td span[data-tooltip-open][data-tooltip-position=below], .toggle .header .text span[data-tooltip-open][data-tooltip-position=below], .blog_paragraph span[data-tooltip-open][data-tooltip-position=below] {
-  bottom: 100%;
-}
-.table th span[data-tooltip-open][data-tooltip-position=above],
-.table td span[data-tooltip-open][data-tooltip-position=above], .toggle .header .text span[data-tooltip-open][data-tooltip-position=above], .blog_paragraph span[data-tooltip-open][data-tooltip-position=above] {
-  top: 100%;
-}
-.table th span[data-tooltip-open][data-tooltip-position=right],
-.table td span[data-tooltip-open][data-tooltip-position=right], .toggle .header .text span[data-tooltip-open][data-tooltip-position=right], .blog_paragraph span[data-tooltip-open][data-tooltip-position=right] {
-  left: 100%;
-}
-.table th span[data-tooltip-open][data-tooltip-position=left],
-.table td span[data-tooltip-open][data-tooltip-position=left], .toggle .header .text span[data-tooltip-open][data-tooltip-position=left], .blog_paragraph span[data-tooltip-open][data-tooltip-position=left] {
-  right: 100%;
-}
 .table th span[data-tooltip-open]::after,
 .table td span[data-tooltip-open]::after, .toggle .header .text span[data-tooltip-open]::after, .blog_paragraph span[data-tooltip-open]::after {
   content: attr(data-tooltip);
-  padding: 0px 3px;
+  padding: 3px;
   position: absolute;
   z-index: 20;
   border-radius: 4px;
@@ -931,7 +915,9 @@ footer .container-fluid .copyright h4 {
   color: #fff;
   left: 50%;
   transform: translateX(-50%);
-  top: -3.5rem;
+  top: -25px;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 .table th span[data-tooltip-open]::before,
 .table td span[data-tooltip-open]::before, .toggle .header .text span[data-tooltip-open]::before, .blog_paragraph span[data-tooltip-open]::before {
@@ -952,11 +938,11 @@ footer .container-fluid .copyright h4 {
 .table td span[data-tooltip-open][data-tooltip-position=above]::before, .toggle .header .text span[data-tooltip-open][data-tooltip-position=above]::before, .blog_paragraph span[data-tooltip-open][data-tooltip-position=above]::before {
   left: 50%;
   transform: translateX(0) translateY(-50%);
+  top: 0px;
   margin-left: -5px;
   border-top: 5px solid #7cbc39;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  top: 0px;
 }
 .table th span[data-tooltip-open][data-tooltip-position=right]::before,
 .table td span[data-tooltip-open][data-tooltip-position=right]::before, .toggle .header .text span[data-tooltip-open][data-tooltip-position=right]::before, .blog_paragraph span[data-tooltip-open][data-tooltip-position=right]::before {
