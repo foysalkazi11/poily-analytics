@@ -15,13 +15,29 @@ const singleBlogDetailsContainer = document.getElementById(
 const title = document.querySelector(".banner__title__secondary");
 const description = document.querySelector(".paragraph-primary");
 const authorInfoBox = document.querySelector(".iconBox");
+const blogPostData = document.querySelector(".postDate");
 const getAllFiltersMenu = document.querySelectorAll(".menuBox__text");
+const SocialDiv = document.querySelector(".social_div");
+
 const URL = "https://srcblending-production.up.railway.app/graphql";
 
+// open social sharing window
+function socialWindow(url) {
+  var left = (screen.width - 570) / 2;
+  var top = (screen.height - 570) / 2;
+  var params =
+    "menubar=no,toolbar=no,status=no,width=570,height=570,top=" +
+    top +
+    ",left=" +
+    left;
+  window.open(url, "NewWindow", params);
+}
+
 // get single blog by slug
-function getAgeneralBlogBySlug() {
+function getAGeneralBlogBySlug() {
   // get query string form url
   const getSlugFormUrl = getQueryStringByQueryName("blogSlug");
+
   if (!getSlugFormUrl) return;
 
   // make GraphQL query
@@ -63,6 +79,8 @@ function getAgeneralBlogBySlug() {
       };
       // change metaTagsInfo
       setMetaTagsInfo(metaTagsInfo);
+      // set social links
+      setShareLinks(metaTagsInfo);
       // render title
       title.textContent = detailsABlog?.title;
       // render description
@@ -77,11 +95,14 @@ function getAgeneralBlogBySlug() {
       authorInfoBox.innerHTML = authorInfo(
         detailsABlog?.createdBy?.profilePicture,
         detailsABlog?.createdBy?.displayName ||
-          `${detailsABlog?.createdBy?.firstName} ${detailsABlog?.createdBy?.lastName}`,
-        detailsABlog?.updatedAt
-          ? `${date?.day} ${date?.month}, ${date?.year}`
-          : ""
+          `${detailsABlog?.createdBy?.firstName} ${detailsABlog?.createdBy?.lastName}`
+        // detailsABlog?.updatedAt
+        //   ? `${date?.day} ${date?.month}, ${date?.year}`
+        //   : ""
       );
+      blogPostData.innerHTML = detailsABlog?.updatedAt
+        ? `${date?.day} ${date?.month}, ${date?.year}`
+        : "";
 
       // render cover image
       const coverImage = renderImage(detailsABlog?.coverImage);
@@ -93,20 +114,10 @@ function getAgeneralBlogBySlug() {
         singleBlogDetailsContainer.innerHTML += htmlForBlogDetails;
       });
 
-      toggleNode(singleBlogDetailsContainer, true);
       toggleNode(loading, false);
-      document.querySelectorAll(".cdx-tooltip").forEach((element) => {
-        element.addEventListener("mouseenter", () => {
-          element.setAttribute("data-tooltip-open", "");
-          setTooltipPosition(element);
-        });
-
-        element.addEventListener("mouseleave", () => {
-          element.removeAttribute("data-tooltip-open");
-        });
-      });
+      toggleNode(SocialDiv, true);
+      toggleNode(singleBlogDetailsContainer, true);
     })
-
     .catch((error) => {
       toggleNode(error, true);
       toggleNode(loading, false);
@@ -145,6 +156,23 @@ function setTooltipPosition(element) {
 
   tooltip.setAttribute("data-tooltip-position", "above");
 }
+
+// set tooltip
+
+function setTooltip() {
+  document.querySelectorAll(".cdx-tooltip").forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      element.setAttribute("data-tooltip-open", "");
+      setTooltipPosition(element);
+    });
+
+    element.addEventListener("mouseleave", () => {
+      element.removeAttribute("data-tooltip-open");
+    });
+  });
+}
+
+// set meta tag info
 
 function setMetaTagsInfo({ title, description, image, url }) {
   //generate meta tags
@@ -186,6 +214,40 @@ function setMetaTagsInfo({ title, description, image, url }) {
     ?.setAttribute("content", url);
 }
 
+function setShareLinks({ title, description, image, url }) {
+  const pageUrl = encodeURIComponent(document.URL);
+  // const tweetDescription = encodeURIComponent(
+  //   document.querySelector("meta[property='og:description']")?.innerHTML
+  // );
+
+  // console.log(pageUrl, tweetDescription);
+
+  const socialIconFacebook = document.querySelector(".socialIcon.facebook");
+  const socialIconTwitter = document.querySelector(".socialIcon.twitter");
+  const socialIconLinkedin = document.querySelector(".socialIcon.linkedin");
+  const socialIconEmail = document.querySelector(".email");
+
+  socialIconFacebook.addEventListener("click", () => {
+    const url = "https://www.facebook.com/sharer.php?u=" + pageUrl;
+    socialWindow(url);
+  });
+  socialIconTwitter.addEventListener("click", () => {
+    const url = "https://twitter.com/intent/tweet?url=" + pageUrl;
+    socialWindow(url);
+  });
+  socialIconLinkedin.addEventListener("click", () => {
+    const url =
+      "https://www.linkedin.com/shareArticle?mini=true&url=" + pageUrl;
+    socialWindow(url);
+  });
+  socialIconEmail.setAttribute(
+    "href",
+    `mailto:user@example.com?subject=${encodeURIComponent(
+      title
+    )}&body=${encodeURIComponent(description)}`
+  );
+}
+
 window.addEventListener("resize", () => {
   document
     .querySelectorAll(".cdx-tooltip[data-tooltip-open]")
@@ -193,7 +255,13 @@ window.addEventListener("resize", () => {
       setTooltipPosition(element);
     });
 });
-document.addEventListener("DOMContentLoaded", getAgeneralBlogBySlug);
+document.addEventListener("DOMContentLoaded", () => {
+  // set social links
+  getAGeneralBlogBySlug();
+
+  // set tooltip
+  setTooltip();
+});
 
 getAllFiltersMenu.forEach((element) => {
   element.addEventListener("click", () => {

@@ -60,6 +60,18 @@
 // section menu end here
 
 // single blog heading section start here
+
+.socialIcon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.postDate {
+  font-size: 1.6rem;
+  color: $lightTextColor;
+}
+
 .iconBox {
   background: $color-white;
 

@@ -319,6 +319,14 @@ section {
   gap: 1rem;
 }
 
+.gap-20 {
+  gap: 2rem;
+}
+
+.gap-30 {
+  gap: 2rem;
+}
+
 .align-center {
   align-items: center;
 }
@@ -831,6 +839,18 @@ footer .container-fluid .copyright h4 {
   .menuBox--right {
     width: 100%;
   }
+}
+
+.socialIcon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.postDate {
+  font-size: 1.6rem;
+  color: #666666;
 }
 
 .iconBox {
