@@ -114,6 +114,9 @@ function getAGeneralBlogBySlug() {
         singleBlogDetailsContainer.innerHTML += htmlForBlogDetails;
       });
 
+      // set tooltip
+      setTooltip();
+
       toggleNode(loading, false);
       toggleNode(SocialDiv, true);
       toggleNode(singleBlogDetailsContainer, true);
@@ -232,7 +235,11 @@ function setShareLinks({ title, description, image, url }) {
     socialWindow(url);
   });
   socialIconTwitter.addEventListener("click", () => {
-    const url = "https://twitter.com/intent/tweet?url=" + pageUrl;
+    const url =
+      "https://twitter.com/intent/tweet?url=" +
+      pageUrl +
+      "&text=" +
+      encodeURIComponent(description);
     socialWindow(url);
   });
   socialIconLinkedin.addEventListener("click", () => {
@@ -255,13 +262,7 @@ window.addEventListener("resize", () => {
       setTooltipPosition(element);
     });
 });
-document.addEventListener("DOMContentLoaded", () => {
-  // set social links
-  getAGeneralBlogBySlug();
-
-  // set tooltip
-  setTooltip();
-});
+document.addEventListener("DOMContentLoaded", getAGeneralBlogBySlug);
 
 getAllFiltersMenu.forEach((element) => {
   element.addEventListener("click", () => {
