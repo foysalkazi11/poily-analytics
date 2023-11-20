@@ -251,7 +251,8 @@ function setShareLinks({ title, description, image, url }) {
     "href",
     `mailto:user@example.com?subject=${encodeURIComponent(
       title
-    )}&body=${encodeURIComponent(description)}`
+    )}&body=${encodeURIComponent(description)} Link: ${pageUrl}
+    `
   );
 }
 
