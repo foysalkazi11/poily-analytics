@@ -52,6 +52,7 @@ html {
   html {
     font-size: 75%;
   }
+
 }
 
 body {
@@ -332,6 +333,7 @@ section {
   max-width: 80%;
   margin: auto;
 }
+
 @media only screen and (max-width: 56.25em) {
   .max__80 {
     max-width: 100%;
@@ -342,6 +344,7 @@ section {
   max-width: 65%;
   margin: auto;
 }
+
 @media only screen and (max-width: 56.25em) {
   .max__65 {
     max-width: 100%;
@@ -463,11 +466,9 @@ section {
 }
 
 .card-grid .card:after {
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) -10%,
-    #fff 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0) -10%,
+      #fff 100%);
   bottom: -0.1rem;
   content: "";
   display: block;
@@ -514,8 +515,8 @@ section {
   margin-bottom: 0;
 }
 
-.card > a:hover .card-content,
-.card > a:focus .card-content {
+.card>a:hover .card-content,
+.card>a:focus .card-content {
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.16),
     0 0.2rem 1rem 0 rgba(0, 0, 0, 0.12);
   max-height: 27.5rem;
@@ -763,6 +764,11 @@ footer .container-fluid .copyright h4 {
   transition: all 0.3s;
 }
 
+.nav-list li a .imgDropdown {
+  margin-bottom: 4px;
+  /* transform: rotateX(3.142rad); */
+}
+
 .nav-list li a:hover,
 .nav-list li a:active {
   color: #fe5717;
@@ -770,6 +776,46 @@ footer .container-fluid .copyright h4 {
 
 .nav-list li a.active {
   color: #fe5717 !important;
+}
+
+
+.nav-list li .dropdown-menu {
+  position: absolute;
+  top: 110px;
+  left: 0px;
+  width: 100%;
+  background-color: #fff;
+  padding: 50px 100px 50px 100px;
+  /* display: flex; */
+}
+
+.nav-list li .dropdown-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.nav-list li .dropdown-list li a {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+}
+
+.nav-list li .dropdown-list li a p {
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.nav-list li .dropdown-list li a p span {
+  color: #FE5717;
+}
+
+.transformed {
+  transform: rotateX(3.142rad);
+  transition: transform 0.3s ease;
 }
 
 @media screen and (min-width: 60rem) {
@@ -1258,6 +1304,38 @@ footer .container-fluid .copyright h4 {
   }
 }
 
+@media screen and (max-width: 960px) {
+  header {
+    position: relative;
+    z-index: 9999;
+  }
+
+  .nav-list li .dropdown-menu {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    /* background-color: #fff; */
+    padding: 15px 50px 15px 50px;
+    /* display: flex; */
+  }
+
+  .nav-list li .dropdown-list {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .nav-list li .dropdown-menu {
+    padding: 5px 10px 5px 10px;
+  }
+}
+
 /* .why_card {
   background: #FFFFFF;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.08);
@@ -1306,11 +1384,9 @@ footer .container-fluid .copyright h4 {
 }
 
 .card-ct::after {
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) -10%,
-    white 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0) -10%,
+      white 100%);
   bottom: -0.1rem;
   content: "";
   display: block;
@@ -1364,8 +1440,8 @@ footer .container-fluid .copyright h4 {
   margin-bottom: 0;
 }
 
-.card-ct > a:hover .card-content,
-.card-ct > a:focus .card-content {
+.card-ct>a:hover .card-content,
+.card-ct>a:focus .card-content {
   border-color: #409bd2;
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.16),
     0 0.2rem 1rem 0 rgba(0, 0, 0, 0.12);
@@ -1381,14 +1457,17 @@ footer .container-fluid .copyright h4 {
   opacity: 0.5;
   transition: opacity 0.3s ease-out 0.5s;
 }
+
 @media only screen and (max-width: 90em) {
   .card-ct::before {
     right: -12.1rem;
   }
+
   .card-ct:nth-child(2)::before {
     right: -166px;
   }
 }
+
 @media only screen and (max-width: 75em) {
   .card-ct {
     width: 100%;
@@ -1402,6 +1481,7 @@ footer .container-fluid .copyright h4 {
   .card-ct::before {
     display: none;
   }
+
   .section_banner {
     background: linear-gradient(0deg, #f9f9f9 0%, #dff8ff 101.95%);
   }

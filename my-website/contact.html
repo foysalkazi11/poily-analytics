@@ -45,26 +45,71 @@
     <header>
       
 
-        <div class="navigation">
-            <div class="nav-container">
-              <div class="brand">
+      <div class="navigation">
+        <div class="nav-container">
+            <div class="brand">
                 <a href="index.html">
                     <img src="./assets/img/poly_logo.svg" class="img-fluid navbar-brand" alt="">
                 </a>
-              </div>
-              <nav>
+            </div>
+            <nav>
                 <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
                 <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a  href="index.html">Home</a></li>
+                    <li><a class="opendropdown" id="solutionDropdown">Solution <img class="imgDropdown"
+                                src="./assets/img/nav/dropdownArrow.png" /></a>
+                            
+                                <div class=" dropdown-menu" id="solutionDropdownMenu" style="display: none;">
+                                    <div class="container">
+                                        <div class="row dropdown-cont">
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a>
+                                                        <div>
+                                                            <img src="./assets/img/nav/dropdownIconFirst.png">
+                                                        </div>
+                                                        <div>
+                                                            <p><span>Core Values</span></p>
+                                                            <p>Discover our foundational <br> guiding principles</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a>
+                                                        <div>
+                                                            <img src="./assets/img/nav/dropdownIconSecond.png">
+                                                        </div>
+                                                        <div>
+                                                            <p><span>Product DNA:</span></p>
+                                                            <p>Explore our unique blend of <br> design elements</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a>
+                                                        <div>
+                                                            <img src="./assets/img/nav/dropdownIconThird.png">
+                                                        </div>
+                                                        <div>
+                                                            <p><span>How We Work:</span></p>
+                                                            <p>Learn about our collaborative <br>delivery process</p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+            
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div></li>
+                                
                     <li><a href="blog.html?category=all">Blog</a></li>
                     <li><a class="active" href="contact.html">Contact Us</a></li>
                 </ul>
-    
-              
-              </nav>
-              <a href="contact.html" class="btn btn-primary">Get Started</a>
-            </div>
+               
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Get Started</a>
         </div>
+    </div>
     </header>
     <!-- header section end -->
     <!-- hero section start -->
@@ -342,6 +387,28 @@ $('html').click(function() {
 }); 
 })(jQuery); 
   </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the solution dropdown link and menu
+            var solutionDropdown = document.getElementById("solutionDropdown");
+            var solutionDropdownMenu = document.getElementById("solutionDropdownMenu");
+            var solutionImage = document.querySelector("#solutionDropdown .imgDropdown");
+
+            // Toggle the visibility of the solution dropdown menu when the link is clicked
+            solutionDropdown.addEventListener("click", function () {
+                if (solutionDropdownMenu.style.display === "none" || solutionDropdownMenu.style.display === "") {
+                    solutionDropdownMenu.style.display = "block";
+                    solutionImage.classList.add("transformed");
+
+                } else {
+                    solutionDropdownMenu.style.display = "none";
+                    solutionImage.classList.remove("transformed");
+
+                }
+            });
+        });
+
+    </script>
 
 </body>
 
