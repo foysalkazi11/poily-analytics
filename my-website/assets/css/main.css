@@ -52,7 +52,6 @@ html {
   html {
     font-size: 75%;
   }
-
 }
 
 body {
@@ -99,11 +98,101 @@ li {
   }
 }
 
+@media screen and (max-width: 1799px) {
+  .cardsWork .col-lg-9 {
+    max-width: 1000px !important ;
+  }
+  .lineEffectRight::before {
+    content: "";
+    top: 54% !important;
+    right: -69% !important;
+  }
+}
 @media screen and (max-width: 1200px) {
   .container {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+  .text__process--img {
+    position: absolute;
+    top: -4rem;
+    right: -3rem;
+  }
+  .cardsWork .col-lg-9 {
+    max-width: 900px !important ;
+  }
+  .lineEffectRight::before {
+    content: "";
+    top: 52% !important;
+    right: -61% !important;
+  }
+}
+@media screen and (max-width:900px) {
+  .end-cont {
+    /* height: 170px !important; */
+    gap: 20px;
+  }
+  .end-cont ul {
+    align-self: auto !important;
+    margin-right: 0px !important;
+  }
+  .card-howWork {
+    padding: 25px !important;
+  }
+  .title-sqr {
+    height: 70%;
+  }
+  .title-cardCont {
+    align-items: center;
+  }
+  .left-side h4 {
+    font-size: 24px !important;
+  }
+  .card-howWork p {
+    font-size: 20px;
+  }
+  .lineEffectRight::before {
+    content: "";
+  display: none;
+  }
+  .lineEffectLeft::before {
+    content: "";
+  display: none;
+  }
+  .margin-top{
+    margin-top: 15px;
+      }
+}
+@media screen and (max-width:540px) {
+  .left-side h2 {
+    font-size: 55px !important;
+  }
+  .card-howWork p {
+    font-size: 16px !important;
+    width: 100% !important;
+  }
+  .text-primary{
+    font-size: 17px;
+  }
+  .end-cont{
+    flex-direction: column !important;
+  }
+  .lineEffectRight::before {
+    content: "";
+  display: none;
+  }
+  .lineEffectLeft::before {
+    content: "";
+  display: none;
+  }
+  .margin-top{
+margin-top: 20px;
+  }
+  .end-cont ul {
+    margin-top:0px !important;
+  }
+
+
 }
 
 .banner__title {
@@ -144,6 +233,13 @@ li {
   color: #000;
   display: inline-block;
 }
+.text-primary {
+  color: var(--000000, #000);
+  font-family: "Circe";
+  font-size: 14px;
+  font-weight: 350;
+  line-height: 27px; /* 150% */
+}
 
 .paragraph-primary {
   font-weight: 400;
@@ -152,6 +248,10 @@ li {
   text-align: center;
   color: #4d4d4d;
 }
+
+.margin-top{
+  margin-top: 38px;
+    }
 
 @media only screen and (max-width: 87.3em) {
   .paragraph-primary {
@@ -223,6 +323,11 @@ section {
   position: absolute;
   top: -3rem;
   right: -6rem;
+}
+.text__process--img {
+  position: absolute;
+  top: -1rem;
+  right: -5rem;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -363,6 +468,18 @@ section {
   padding-top: 0;
   position: relative;
 }
+.banner__work--img {
+  /* margin-top: 10rem; */
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding: 4rem 4rem 0rem 4rem; */
+  padding-top: 0;
+  position: relative;
+  width: 100%;
+  margin-top:0px;
+  margin-bottom: -13px;
+}
 
 @media only screen and (max-width: 35.5em) {
   .banner__review--card {
@@ -436,6 +553,9 @@ section {
   color: #fff !important;
   font-size: 2.4rem;
 }
+.btn-process {
+  font-size: 1.8rem !important;
+}
 
 .card-grid {
   display: grid;
@@ -466,9 +586,11 @@ section {
 }
 
 .card-grid .card:after {
-  background: linear-gradient(to bottom,
-      rgba(255, 255, 255, 0) -10%,
-      #fff 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) -10%,
+    #fff 100%
+  );
   bottom: -0.1rem;
   content: "";
   display: block;
@@ -515,8 +637,8 @@ section {
   margin-bottom: 0;
 }
 
-.card>a:hover .card-content,
-.card>a:focus .card-content {
+.card > a:hover .card-content,
+.card > a:focus .card-content {
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.16),
     0 0.2rem 1rem 0 rgba(0, 0, 0, 0.12);
   max-height: 27.5rem;
@@ -585,7 +707,8 @@ section {
   opacity: 0.9;
 }
 
-.why__card {
+.why__card,
+.process-work {
   border-radius: 2.5rem;
   padding: 5rem 3rem;
   text-align: center;
@@ -597,18 +720,36 @@ section {
   }
 }
 
-.why__card .why__card--title {
+.why__card .why__card--title,
+.aboutWork-title {
   font-family: "Circe";
   font-size: 3.2rem;
   line-height: 1.1;
   color: #fe5717;
   padding-bottom: 2rem;
 }
+.aboutWork-title {
+  font-family: "Circe";
+  font-size: 35px;
+  line-height: 37px; /* 105.714% */
+  padding-bottom: 2rem;
+  color: var(--000000, #000);
+  font-weight: 350;
+}
 
-.why__card .why__card--description {
+.why__card .why__card--description,
+.aboutWork-description {
   font-size: 1.9rem;
   line-height: 1.5;
   color: #4d4d4d;
+}
+.aboutWork-description {
+  font-size: 16px;
+  line-height: 22px; /* 137.5% */
+  color: var(--000000, #000);
+  font-family: Circe;
+  font-weight: 350;
+  text-align: center;
 }
 
 .color-red-light {
@@ -778,7 +919,6 @@ footer .container-fluid .copyright h4 {
   color: #fe5717 !important;
 }
 
-
 .nav-list li .dropdown-menu {
   position: absolute;
   top: 110px;
@@ -801,7 +941,6 @@ footer .container-fluid .copyright h4 {
   display: flex;
   align-items: center;
   gap: 15px;
-
 }
 
 .nav-list li .dropdown-list li a p {
@@ -810,7 +949,7 @@ footer .container-fluid .copyright h4 {
 }
 
 .nav-list li .dropdown-list li a p span {
-  color: #FE5717;
+  color: #fe5717;
 }
 
 .transformed {
@@ -956,6 +1095,8 @@ footer .container-fluid .copyright h4 {
   position: relative;
   background-position: center;
   background-size: cover;
+  padding-bottom: 0px;
+  overflow: hidden;
 }
 
 .section_banner .green-line-lottie {
@@ -1008,14 +1149,36 @@ footer .container-fluid .copyright h4 {
   bottom: 10%;
   left: 10%;
 }
+.bar-graph-LeftDown {
+  position: absolute;
+  top: 72%;
+  left: 15%;
+}
+/* .bar-graph-rightUp {
+  position: absolute;
+  top: 72%;
+  right: 15%;
+} */
+
+.bar-graph-solutionWork {
+  bottom: 45% !important;
+}
 
 @media only screen and (max-width: 87.3em) {
   .section_banner .bar-graph-lottie {
+    left: 5% !important;
+  }
+  .bar-graph-LeftDown {
     left: 5%;
   }
 
   .section_banner .bar-graph-lottie lottie-player {
     width: 30rem;
+  }
+
+  .bar-graph-LeftDown {
+    width: 25rem;
+    top: 68%;
   }
 }
 
@@ -1023,10 +1186,17 @@ footer .container-fluid .copyright h4 {
   .section_banner .bar-graph-lottie lottie-player {
     width: 23rem;
   }
+  .bar-graph-LeftDown {
+    width: 20rem;
+    top: 68%;
+  }
 }
 
 @media only screen and (max-width: 56.25em) {
   .section_banner .bar-graph-lottie {
+    display: none;
+  }
+  .bar-graph-LeftDown {
     display: none;
   }
 }
@@ -1057,6 +1227,7 @@ footer .container-fluid .copyright h4 {
 /* who section start*/
 .section__who {
   position: relative;
+  overflow: hidden;
 }
 
 .section__who .hospital__img {
@@ -1064,6 +1235,180 @@ footer .container-fluid .copyright h4 {
   bottom: 12rem;
   right: 0;
   width: 50%;
+}
+.cardsWork {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-top: 40px;
+}
+.cardsWork .col-lg-9 {
+  max-width: 1200px;
+}
+.right-align {
+  align-self: flex-end;
+}
+.card-howWork {
+  border-radius: 30px;
+  /* height: 350px; */
+  /* flex-shrink: 0; */
+  padding: 45px;
+}
+.bg-red {
+  background-color: #fff5f1;
+}
+.bg-green {
+  background-color: #f2ffe4;
+}
+.bg-blue {
+  background-color: #eaf8ff;
+}
+.card-howWork p {
+  color: #333;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Satoshi;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 150% */
+  width: 50%;
+}
+.lineEffectRight,
+.lineEffectLeft {
+  position: relative;
+}
+.lineEffectRight::before {
+  content: "";
+  background-image: url(../img/solutions/cardsLineDotted.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 48%;
+  right: -73%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.lineEffectLeft::before {
+  content: "";
+  background-image: url(../img/solutions/cardsLineDottedLeft.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 56%;
+  right: 17%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hed-main {
+  display: flex;
+  justify-content: space-between;
+}
+.hed-main img {
+  width: 80px;
+  align-self: center;
+}
+.left-side {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+
+}
+.left-side img {
+  width: 14px;
+}
+.margin-img {
+  margin-right: 10px;
+}
+.title-cardCont {
+  display: flex;
+  flex-direction: row;
+}
+.title-sqr {
+  display: flex;
+  padding: 12px 20px;
+  align-items: center;
+  /* gap: 10px; */
+  border-radius: 20px;
+  margin-left: 20px;
+}
+
+.orange-title {
+  background: #fe5717;
+}
+.green-title {
+  background: #7cbc39;
+}
+.blue-title {
+  background: #86d8f1;
+}
+
+.title-sqr p {
+  color: #fff;
+  text-align: center;
+  font-family: "Circe";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 120px;
+}
+
+.icon-cont {
+  margin-top: 7px;
+  width: 20%;
+}
+.left-side h2 {
+  font-family: "Satoshi";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.title-cardCont .red-text {
+  color: #fe5717;
+}
+.title-cardCont .green-text {
+  color: #7cbc39;
+}
+.title-cardCont .blue-text {
+  color: #86d8f1;
+}
+
+.left-side h4 {
+  color: #000;
+  /* text-align: center; */
+  font-family: "Circe";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 20px;
+}
+.end-cont {
+  display: flex;
+  justify-content: space-between;
+  /* height: 150px; */
+}
+.end-cont ul {
+  align-self: self-end;
+  margin-right: 100px;
+  margin-top: 28px;
+  /* margin-right: 50px; */
+}
+.end-cont ul li {
+  overflow: hidden;
+  color: var(--000000, #000);
+  text-overflow: ellipsis;
+  font-family: "Circe";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.66;
+  margin-top: 5px;
 }
 
 @media only screen and (max-width: 48em) {
@@ -1326,7 +1671,6 @@ footer .container-fluid .copyright h4 {
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-
   }
 }
 
@@ -1384,9 +1728,11 @@ footer .container-fluid .copyright h4 {
 }
 
 .card-ct::after {
-  background: linear-gradient(to bottom,
-      rgba(255, 255, 255, 0) -10%,
-      white 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) -10%,
+    white 100%
+  );
   bottom: -0.1rem;
   content: "";
   display: block;
@@ -1440,8 +1786,8 @@ footer .container-fluid .copyright h4 {
   margin-bottom: 0;
 }
 
-.card-ct>a:hover .card-content,
-.card-ct>a:focus .card-content {
+.card-ct > a:hover .card-content,
+.card-ct > a:focus .card-content {
   border-color: #409bd2;
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.16),
     0 0.2rem 1rem 0 rgba(0, 0, 0, 0.12);
