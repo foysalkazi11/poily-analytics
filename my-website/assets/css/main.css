@@ -98,103 +98,6 @@ li {
   }
 }
 
-@media screen and (max-width: 1799px) {
-  .cardsWork .col-lg-9 {
-    max-width: 1000px !important ;
-  }
-  .lineEffectRight::before {
-    content: "";
-    top: 54% !important;
-    right: -69% !important;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .container {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-  .text__process--img {
-    position: absolute;
-    top: -4rem;
-    right: -3rem;
-  }
-  .cardsWork .col-lg-9 {
-    max-width: 900px !important ;
-  }
-  .lineEffectRight::before {
-    content: "";
-    top: 52% !important;
-    right: -61% !important;
-  }
-}
-@media screen and (max-width:900px) {
-  .end-cont {
-    /* height: 170px !important; */
-    gap: 20px;
-  }
-  .end-cont ul {
-    align-self: auto !important;
-    margin-right: 0px !important;
-  }
-  .card-howWork {
-    padding: 25px !important;
-  }
-  .title-sqr {
-    height: 70%;
-  }
-  .title-cardCont {
-    align-items: center;
-  }
-  .left-side h4 {
-    font-size: 24px !important;
-  }
-  .card-howWork p {
-    font-size: 20px;
-  }
-  .lineEffectRight::before {
-    content: "";
-  display: none;
-  }
-  .lineEffectLeft::before {
-    content: "";
-  display: none;
-  }
-  .margin-top{
-    margin-top: 15px;
-      }
-}
-@media screen and (max-width:540px) {
-  .left-side h2 {
-    font-size: 55px !important;
-  }
-  .card-howWork p {
-    font-size: 16px !important;
-    width: 100% !important;
-  }
-  .text-primary{
-    font-size: 17px;
-  }
-  .end-cont{
-    flex-direction: column !important;
-  }
-  .lineEffectRight::before {
-    content: "";
-  display: none;
-  }
-  .lineEffectLeft::before {
-    content: "";
-  display: none;
-  }
-  .margin-top{
-margin-top: 20px;
-  }
-  .end-cont ul {
-    margin-top:0px !important;
-  }
-
-
-}
-
 .banner__title {
   font-size: 6rem;
   line-height: 1.2;
@@ -226,6 +129,9 @@ margin-top: 20px;
   }
 }
 
+#sectionId_DNA{
+  padding: 3rem 0;
+}
 .heading-primary {
   font-weight: 700;
   font-size: 4.8rem;
@@ -248,10 +154,144 @@ margin-top: 20px;
   text-align: center;
   color: #4d4d4d;
 }
+.paragraph-banner {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  color: #4d4d4d;
+}
 
-.margin-top{
+.margin-top {
   margin-top: 38px;
-    }
+}
+
+.heading-center {
+  width: 100%;
+  text-align: center;
+}
+.cardContainer{
+  width: 100%;
+  padding: 80px;
+  border-radius: 60px;
+  margin-top: 40px;
+}
+.benefitCard{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content-cont , .image-cont {
+  width: 48%;
+}
+.content-cont{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.image-cont-right {
+  text-align: end;
+}
+.image-cont-left {
+  text-align: start;
+}
+.border{
+ border:  2px solid;
+}
+.bullet-list{
+  position: relative;
+  display: flex;
+}
+.bullet-list::before {
+  content: url("../img/solutions/greenli.png");
+  margin-right: 10px; /* Adjust the spacing between the image and the text */
+}
+.heading-cardDna h2{
+  color: var(--000000, #000);
+  font-family: 'Circe';
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; /* 137.143% */
+}
+.reactangle-underline-red{
+  width: 101px;
+height: 6px;
+border-radius: 50px;
+background: #FE5717;
+margin-bottom: 10px;
+margin-top: 10px;
+}
+.reactangle-underline-green{
+  width: 101px;
+height: 6px;
+border-radius: 50px;
+background: #7CBC39;
+margin-bottom: 10px;
+margin-top: 10px;
+}
+.reactangle-underline-blue{
+  width: 101px;
+height: 6px;
+border-radius: 50px;
+background: #9BE3F9;
+margin-bottom: 10px;
+margin-top: 10px;
+}
+.containerText{
+  margin-bottom: 25px;
+}
+.containerText p{
+  color: var(--000000, #000);
+  font-family: Circe;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 155.556% */
+  opacity: 0.6;
+}
+.container-listing h4{
+  color: var(--000000, #000);
+  font-family: Circe;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+.container-listing ul li{
+  color: var(--000000, #000);
+  font-family: Circe;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+.text-dnaHeading{
+  color: var(--000000, #000);
+text-align: center;
+font-family: 'Circe';
+font-size: 24px;
+font-style: normal;
+font-weight: 350;
+line-height: 36px; /* 150% */
+letter-spacing: -0.24px;
+}
+.banner-coreValues{
+flex-direction: row;
+}
+.content-banner{
+  width:60% ;
+}
+.img-bannerValues {
+  width:40% ;
+}
+.img-align{
+  bottom: 0;
+  right: 0;
+
+}
 
 @media only screen and (max-width: 87.3em) {
   .paragraph-primary {
@@ -285,6 +325,9 @@ section {
   padding: 10rem 0;
 }
 
+#sectionId_aboutValues{
+  padding: 10rem 0 5rem 0;
+}
 .pt-0 {
   padding-top: 0;
 }
@@ -477,10 +520,24 @@ section {
   padding-top: 0;
   position: relative;
   width: 100%;
-  margin-top:0px;
+  margin-top: 0px;
   margin-bottom: -13px;
 }
+.img-align {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: fit-content;
+    margin-right: 0;
+}
 
+.flex-banner{
+  display: flex;
+  justify-content: space-between;
+}
+.banner-headerCont{
+  width: 100%;
+}
 @media only screen and (max-width: 35.5em) {
   .banner__review--card {
     max-width: 95%;
@@ -712,7 +769,10 @@ section {
   border-radius: 2.5rem;
   padding: 5rem 3rem;
   text-align: center;
+  height: 100%;
 }
+
+
 
 @media only screen and (max-width: 56.25em) {
   .why__card {
@@ -1099,6 +1159,9 @@ footer .container-fluid .copyright h4 {
   overflow: hidden;
 }
 
+.padding-bottom-banner{
+  padding-bottom: 100px;
+}
 .section_banner .green-line-lottie {
   position: absolute;
   bottom: 3.5rem;
@@ -1245,6 +1308,13 @@ footer .container-fluid .copyright h4 {
 .cardsWork .col-lg-9 {
   max-width: 1200px;
 }
+.cardsContHeader .col-12 {
+  max-width: 100%;
+}
+.cardsContHeader {
+ display:flex;
+ flex-direction: row;
+}
 .right-align {
   align-self: flex-end;
 }
@@ -1314,7 +1384,6 @@ footer .container-fluid .copyright h4 {
   display: flex;
   flex-direction: column;
   width: 80%;
-
 }
 .left-side img {
   width: 14px;
@@ -1830,5 +1899,172 @@ footer .container-fluid .copyright h4 {
 
   .section_banner {
     background: linear-gradient(0deg, #f9f9f9 0%, #dff8ff 101.95%);
+  }
+}
+
+@media screen and (max-width: 1799px) {
+  .cardsWork .col-lg-9 {
+    max-width: 1000px !important ;
+  }
+  .lineEffectRight::before {
+    content: "";
+    top: 54% !important;
+    right: -69% !important;
+  }
+  .img-align{
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .text__process--img {
+    position: absolute;
+    top: -4rem;
+    right: -3rem;
+  }
+  .cardsWork .col-lg-9 {
+    max-width: 900px !important ;
+  }
+  .lineEffectRight::before {
+    content: "";
+    top: 52% !important;
+    right: -61% !important;
+  }
+.container-listing ul li {
+    font-size: 16px;
+  }
+  .cardContainer {
+    padding: 30px;
+  }
+  .containerText p {
+    font-size: 18px;
+  }
+  .content-cont {
+    width: 50%;
+  }
+  .image-cont-left , .image-cont-right {
+    width: 48%;
+    align-content: center;
+  }
+  .text-dnaHeading {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .img-align{
+    width: 40%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .end-cont {
+    /* height: 170px !important; */
+    gap: 20px;
+  }
+  .end-cont ul {
+    align-self: auto !important;
+    margin-right: 0px !important;
+  }
+  .card-howWork {
+    padding: 25px !important;
+  }
+  .title-sqr {
+    height: 70%;
+  }
+  .title-cardCont {
+    align-items: center;
+  }
+  .left-side h4 {
+    font-size: 24px !important;
+  }
+  .card-howWork p {
+    font-size: 20px;
+  }
+  .lineEffectRight::before {
+    content: "";
+    display: none;
+  }
+  .lineEffectLeft::before {
+    content: "";
+    display: none;
+  }
+  .margin-top {
+    margin-top: 15px;
+  }
+  .benefitCard {
+    flex-direction: column;
+  }
+  .content-cont {
+    width: 100%;
+  }
+  .image-cont-left , .image-cont-right {
+    width: 100%;
+    text-align: center;
+  }
+  .text-dnaHeading  br{
+display: none;
+  }
+  .text-dnaHeading{
+    font-size: 18px;
+  }
+  .banner-coreValues{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .content-banner{
+    width: 100%;
+  }
+  .img-align{
+    width: 100%;
+    position: static;
+  }
+  .padding-bottom-banner{
+    padding-bottom: 0;
+  }
+  .banner-headerCont{
+    text-align: center;
+  }
+  .img-bannerValues {
+    width: 80%;
+    align-self: center;
+}
+
+.about-card-gap{
+gap: 50px;
+}
+
+}
+@media screen and (max-width: 540px) {
+  .left-side h2 {
+    font-size: 55px !important;
+  }
+  .card-howWork p {
+    font-size: 16px !important;
+    width: 100% !important;
+  }
+  .text-primary {
+    font-size: 17px;
+  }
+  .end-cont {
+    flex-direction: column !important;
+  }
+  .lineEffectRight::before {
+    content: "";
+    display: none;
+  }
+  .lineEffectLeft::before {
+    content: "";
+    display: none;
+  }
+  .margin-top {
+    margin-top: 20px;
+  }
+  .end-cont ul {
+    margin-top: 0px !important;
+  }
+  .aboutWork-description br{
+display: none;
   }
 }
