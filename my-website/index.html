@@ -92,8 +92,8 @@
                     <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
                     <ul class="nav-list">
                         <li><a class="active" href="index.html">Home</a></li>
-                        <li><a class="opendropdown" id="solutionDropdown">Solution <img class="imgDropdown"
-                                    src="./assets/img/nav/dropdownArrow.png" /></a>
+                        <li><a class="opendropdown" id="solutionDropdown">Solution
+                            <img class="imgDropdown transformed" src="./assets/img/nav/dropdownArrow.png"></a>
 
                             <div class=" dropdown-menu" id="solutionDropdownMenu" style="display: none;">
                                 <div class="container">
@@ -106,7 +106,8 @@
                                                     </div>
                                                     <div>
                                                         <p><span>Core Values</span></p>
-                                                        <p>Discover our foundational <br> guiding principles</p>
+                                                        <p class="mobile-none">Discover our foundational <br> guiding
+                                                            principles</p>
                                                     </div>
                                                 </a>
                                             </li>
@@ -117,7 +118,8 @@
                                                     </div>
                                                     <div>
                                                         <p><span>Product DNA:</span></p>
-                                                        <p>Explore our unique blend of <br> design elements</p>
+                                                        <p class="mobile-none">Explore our unique blend of <br> design
+                                                            elements</p>
                                                     </div>
                                                 </a>
                                             </li>
@@ -128,7 +130,8 @@
                                                     </div>
                                                     <div>
                                                         <p><span>How We Work:</span></p>
-                                                        <p>Learn about our collaborative <br>delivery process</p>
+                                                        <p class="mobile-none">Learn about our collaborative
+                                                            <br>delivery process</p>
                                                     </div>
                                                 </a>
                                             </li>
@@ -205,7 +208,7 @@
                 <h2 class="heading-primary text-back-element padding_bottom--20">Why <span class="text__element">POILY
                         <img src="./assets/img/text-elment.png" class="text__element--img" alt=""></span></h2>
             </div>
-            <div class="row ">
+            <div class="row gap-6">
                 <div class="col-lg-3">
                     <div class="why__card color-red-light">
                         <div class="why__card--img margin-bottom-24">
@@ -878,11 +881,11 @@
             solutionDropdown.addEventListener("click", function () {
                 if (solutionDropdownMenu.style.display === "none" || solutionDropdownMenu.style.display === "") {
                     solutionDropdownMenu.style.display = "block";
-                    solutionImage.classList.add("transformed");
+                    solutionImage.classList.remove("transformed");
 
                 } else {
                     solutionDropdownMenu.style.display = "none";
-                    solutionImage.classList.remove("transformed");
+                    solutionImage.classList.add("transformed");
 
                 }
             });

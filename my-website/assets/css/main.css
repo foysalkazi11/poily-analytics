@@ -352,6 +352,9 @@ section {
 .gap-3 {
   gap: 1rem;
 }
+.gap-6 {
+  gap: 2rem;
+}
 
 .align-center {
   align-items: center;
@@ -510,6 +513,7 @@ section {
   padding: 4rem;
   padding-top: 0;
   position: relative;
+  margin-bottom: 10rem;
 }
 .banner__work--img {
   /* margin-top: 10rem; */
@@ -520,8 +524,8 @@ section {
   padding-top: 0;
   position: relative;
   width: 100%;
-  margin-top: 0px;
-  margin-bottom: -13px;
+  margin-top: 20px;
+  margin-bottom: 0px;
 }
 .img-align {
     position: absolute;
@@ -922,6 +926,8 @@ footer .container-fluid .copyright h4 {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 15px;
+    text-align: center;
   }
 }
 
@@ -1996,6 +2002,10 @@ footer .container-fluid .copyright h4 {
   .benefitCard {
     flex-direction: column;
   }
+  .cardContainer:nth-child(2n) .benefitCard{
+    flex-direction: column-reverse;
+
+  }
   .content-cont {
     width: 100%;
   }
@@ -2066,5 +2076,21 @@ gap: 50px;
   }
   .aboutWork-description br{
 display: none;
+  }
+  .mobile-none{
+    display: none;
+  }
+  .text-back-element::before {
+    content: "";
+    top: -1.3rem;
+    left: -5.6rem;
+  }
+  .text__process--img{
+    width: 40px;
+    top: -1rem;
+    right: -4rem;
+  }
+  .cardContainer{
+    border-radius: 30px;
   }
 }
