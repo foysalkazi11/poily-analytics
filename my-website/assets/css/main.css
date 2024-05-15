@@ -129,7 +129,7 @@ li {
   }
 }
 
-#sectionId_DNA{
+#sectionId_DNA {
   padding: 3rem 0;
 }
 .heading-primary {
@@ -142,7 +142,7 @@ li {
 .text-primary {
   color: var(--000000, #000);
   font-family: "Circe";
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 350;
   line-height: 27px; /* 150% */
 }
@@ -169,22 +169,23 @@ li {
   width: 100%;
   text-align: center;
 }
-.cardContainer{
+.cardContainer {
   width: 100%;
   padding: 80px;
   border-radius: 60px;
   margin-top: 40px;
 }
-.benefitCard{
+.benefitCard {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.content-cont , .image-cont {
+.content-cont,
+.image-cont {
   width: 48%;
 }
-.content-cont{
+.content-cont {
   padding-top: 20px;
   padding-bottom: 10px;
 }
@@ -194,53 +195,61 @@ li {
 .image-cont-left {
   text-align: start;
 }
-.border{
- border:  2px solid;
+.border {
+  border: 2px solid;
 }
-.bullet-list{
+.bullet-list {
   position: relative;
   display: flex;
 }
-.bullet-list::before {
+.bullet-list-green::before {
   content: url("../img/solutions/greenli.png");
   margin-right: 10px; /* Adjust the spacing between the image and the text */
 }
-.heading-cardDna h2{
+.bullet-list-orange::before {
+  content: url("../img/solutions/orangeli.png");
+  margin-right: 10px; /* Adjust the spacing between the image and the text */
+}
+.bullet-list-blue::before {
+  content: url("../img/solutions/blueli.png");
+  margin-right: 10px; /* Adjust the spacing between the image and the text */
+}
+.heading-cardDna h2 {
   color: var(--000000, #000);
-  font-family: 'Circe';
+  font-family: "Circe";
   font-size: 35px;
   font-style: normal;
   font-weight: 700;
   line-height: 48px; /* 137.143% */
 }
-.reactangle-underline-red{
+.reactangle-underline-red {
   width: 101px;
-height: 6px;
-border-radius: 50px;
-background: #FE5717;
-margin-bottom: 10px;
-margin-top: 10px;
+  height: 6px;
+  border-radius: 50px;
+  background: #fe5717;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
-.reactangle-underline-green{
+.reactangle-underline-green {
   width: 101px;
-height: 6px;
-border-radius: 50px;
-background: #7CBC39;
-margin-bottom: 10px;
-margin-top: 10px;
+  height: 6px;
+  border-radius: 50px;
+  background: #7cbc39;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
-.reactangle-underline-blue{
+.reactangle-underline-blue {
   width: 101px;
-height: 6px;
-border-radius: 50px;
-background: #9BE3F9;
-margin-bottom: 10px;
-margin-top: 10px;
+  height: 6px;
+  border-radius: 50px;
+  background: #9be3f9;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
-.containerText{
+.containerText {
   margin-bottom: 25px;
 }
-.containerText p{
+.containerText p {
   color: var(--000000, #000);
   font-family: Circe;
   font-size: 18px;
@@ -249,7 +258,7 @@ margin-top: 10px;
   line-height: 28px; /* 155.556% */
   opacity: 0.6;
 }
-.container-listing h4{
+.container-listing h4 {
   color: var(--000000, #000);
   font-family: Circe;
   font-size: 18px;
@@ -258,7 +267,7 @@ margin-top: 10px;
   line-height: normal;
   margin-bottom: 10px;
 }
-.container-listing ul li{
+.container-listing ul li {
   color: var(--000000, #000);
   font-family: Circe;
   font-size: 18px;
@@ -268,29 +277,28 @@ margin-top: 10px;
   opacity: 0.6;
   margin-top: 10px;
 }
-.text-dnaHeading{
+.text-dnaHeading {
   color: var(--000000, #000);
-text-align: center;
-font-family: 'Circe';
-font-size: 24px;
-font-style: normal;
-font-weight: 350;
-line-height: 36px; /* 150% */
-letter-spacing: -0.24px;
+  text-align: center;
+  font-family: "Circe";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 36px; /* 150% */
+  letter-spacing: -0.24px;
 }
-.banner-coreValues{
-flex-direction: row;
+.banner-coreValues {
+  flex-direction: row;
 }
-.content-banner{
-  width:60% ;
+.content-banner {
+  width: 60%;
 }
 .img-bannerValues {
-  width:40% ;
+  width: 40%;
 }
-.img-align{
+.img-align {
   bottom: 0;
   right: 0;
-
 }
 
 @media only screen and (max-width: 87.3em) {
@@ -325,7 +333,7 @@ section {
   padding: 10rem 0;
 }
 
-#sectionId_aboutValues{
+#sectionId_aboutValues {
   padding: 10rem 0 5rem 0;
 }
 .pt-0 {
@@ -528,18 +536,18 @@ section {
   margin-bottom: 0px;
 }
 .img-align {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: fit-content;
-    margin-right: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: fit-content;
+  margin-right: 0;
 }
 
-.flex-banner{
+.flex-banner {
   display: flex;
   justify-content: space-between;
 }
-.banner-headerCont{
+.banner-headerCont {
   width: 100%;
 }
 @media only screen and (max-width: 35.5em) {
@@ -643,6 +651,7 @@ section {
 @media only screen and (max-width: 75em) {
   .card-grid .card {
     width: auto;
+    position: relative;
   }
 }
 
@@ -667,8 +676,8 @@ section {
   font-size: 1.6rem;
   left: 0;
   line-height: 1.7;
-  max-height: 15rem;
-  min-height: 15rem;
+  max-height: 13.5rem;
+  min-height: 13.5rem;
   overflow: hidden;
   padding: 1.5rem;
   position: absolute;
@@ -677,12 +686,85 @@ section {
   transition-property: max-height, min-height, box-shadow, background-color;
   border-radius: 2rem;
 }
+.card-grid .card .card-content p {
+  color: #323232;
+}
 
+.card-learn-btn {
+  color: var(--7-cbc-39, #7cbc39);
+  text-align: center;
+  font-family: Circe;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 0;
+  background-color: transparent;
+}
+.moretext {
+  display: none;
+}
+.new-card {
+  float: left;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  position: relative;
+  padding: 1.5rem;
+  transition: opacity 0.3s ease-out;
+  width: 30rem;
+  height: 16rem;
+}
+.new-card.active {
+  z-index: 99;
+}
+.new-card-content.active {
+  z-index: 99;
+  border-radius: 15px;
+  border: 2px solid #7cbc39;
+  background: #fff;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.08);
+}
+.new-card-content {
+  background-color: #fff;
+  color: #323232;
+  /* font-size: 1.6rem; */
+  left: 0;
+  line-height: 1.7;
+  overflow: hidden;
+  padding: 1.5rem;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s;
+  transition-property: max-height, min-height, box-shadow, background-color;
+  border-radius: 2rem;
+}
+.new-card-content a {
+  color: #000;
+}
+.new-card-content h3 {
+  color: var(--7-cbc-39, #7cbc39);
+  font-family: "Circe";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 111.111% */
+}
+.new-card-content a p {
+  overflow: hidden;
+  color: var(--000000, #000);
+  text-overflow: ellipsis;
+  font-family: "Circe";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 22px; /* 137.5% */
+}
 .card-grid .card .card-content .card-title {
   font-family: "Circe";
   font-size: 1.8rem;
   line-height: 1.2;
   margin-top: 0;
+  color: var(--7-cbc-39, #7cbc39);
 }
 
 .card-grid .card .card-content .d-flex {
@@ -697,7 +779,18 @@ section {
 .card-grid .card .card-content p:last-child {
   margin-bottom: 0;
 }
-
+.card.active .card-content {
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.16),
+    0 0.2rem 1rem 0 rgba(0, 0, 0, 0.12);
+  max-height: 27.5rem;
+  min-height: auto;
+  overflow: auto;
+  transition: max-height 0.3s 0.5s, min-height 0.3s 0.5s, box-shadow 0.5s 0.4s,
+    border-color 0.2s;
+  z-index: 10000;
+  border: 0.1rem solid #7cbc39;
+  transition: 0.3s;
+}
 .card > a:hover .card-content,
 .card > a:focus .card-content {
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.16),
@@ -771,12 +864,10 @@ section {
 .why__card,
 .process-work {
   border-radius: 2.5rem;
-  padding: 5rem 3rem;
+  padding: 5rem 3rem 2rem 3rem;
   text-align: center;
   height: 100%;
 }
-
-
 
 @media only screen and (max-width: 56.25em) {
   .why__card {
@@ -803,12 +894,28 @@ section {
 
 .why__card .why__card--description,
 .aboutWork-description {
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   color: #4d4d4d;
 }
+a.learnmore-btn p {
+  text-align: center;
+  font-family: Circe;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: 31px;
+  padding-top: 20px;
+}
+.text-orange {
+  color: var(--fe-5717, #fe5717);
+}
+.text-green {
+  color: var(--7-cbc-39, #7cbc39);
+}
+
 .aboutWork-description {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 22px; /* 137.5% */
   color: var(--000000, #000);
   font-family: Circe;
@@ -1165,7 +1272,7 @@ footer .container-fluid .copyright h4 {
   overflow: hidden;
 }
 
-.padding-bottom-banner{
+.padding-bottom-banner {
   padding-bottom: 100px;
 }
 .section_banner .green-line-lottie {
@@ -1318,8 +1425,8 @@ footer .container-fluid .copyright h4 {
   max-width: 100%;
 }
 .cardsContHeader {
- display:flex;
- flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 .right-align {
   align-self: flex-end;
@@ -1478,7 +1585,7 @@ footer .container-fluid .copyright h4 {
   color: var(--000000, #000);
   text-overflow: ellipsis;
   font-family: "Circe";
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1917,7 +2024,7 @@ footer .container-fluid .copyright h4 {
     top: 54% !important;
     right: -69% !important;
   }
-  .img-align{
+  .img-align {
     width: 40%;
   }
 }
@@ -1940,7 +2047,7 @@ footer .container-fluid .copyright h4 {
     top: 52% !important;
     right: -61% !important;
   }
-.container-listing ul li {
+  .container-listing ul li {
     font-size: 16px;
   }
   .cardContainer {
@@ -1952,7 +2059,8 @@ footer .container-fluid .copyright h4 {
   .content-cont {
     width: 50%;
   }
-  .image-cont-left , .image-cont-right {
+  .image-cont-left,
+  .image-cont-right {
     width: 48%;
     align-content: center;
   }
@@ -1960,7 +2068,7 @@ footer .container-fluid .copyright h4 {
     font-size: 20px;
     line-height: 1.6;
   }
-  .img-align{
+  .img-align {
     width: 40%;
   }
 }
@@ -2002,49 +2110,48 @@ footer .container-fluid .copyright h4 {
   .benefitCard {
     flex-direction: column;
   }
-  .cardContainer:nth-child(2n) .benefitCard{
+  .cardContainer:nth-child(2n) .benefitCard {
     flex-direction: column-reverse;
-
   }
   .content-cont {
     width: 100%;
   }
-  .image-cont-left , .image-cont-right {
+  .image-cont-left,
+  .image-cont-right {
     width: 100%;
     text-align: center;
   }
-  .text-dnaHeading  br{
-display: none;
+  .text-dnaHeading br {
+    display: none;
   }
-  .text-dnaHeading{
+  .text-dnaHeading {
     font-size: 18px;
   }
-  .banner-coreValues{
+  .banner-coreValues {
     flex-direction: column;
     gap: 20px;
   }
-  .content-banner{
+  .content-banner {
     width: 100%;
   }
-  .img-align{
+  .img-align {
     width: 100%;
     position: static;
   }
-  .padding-bottom-banner{
+  .padding-bottom-banner {
     padding-bottom: 0;
   }
-  .banner-headerCont{
+  .banner-headerCont {
     text-align: center;
   }
   .img-bannerValues {
     width: 80%;
     align-self: center;
-}
+  }
 
-.about-card-gap{
-gap: 50px;
-}
-
+  .about-card-gap {
+    gap: 50px;
+  }
 }
 @media screen and (max-width: 540px) {
   .left-side h2 {
@@ -2074,10 +2181,10 @@ gap: 50px;
   .end-cont ul {
     margin-top: 0px !important;
   }
-  .aboutWork-description br{
-display: none;
+  .aboutWork-description br {
+    display: none;
   }
-  .mobile-none{
+  .mobile-none {
     display: none;
   }
   .text-back-element::before {
@@ -2085,12 +2192,12 @@ display: none;
     top: -1.3rem;
     left: -5.6rem;
   }
-  .text__process--img{
+  .text__process--img {
     width: 40px;
     top: -1rem;
     right: -4rem;
   }
-  .cardContainer{
+  .cardContainer {
     border-radius: 30px;
   }
 }
