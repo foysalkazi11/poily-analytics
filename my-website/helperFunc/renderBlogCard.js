@@ -29,7 +29,7 @@ export default function renderBlogCard(
            <div class="blog_card ${modifyCard && "blog_card--row"}">
                   <img src=${coverImage} class="img" alt="img">
                   <div class="${modifyCard && "margin_left_20"}">
-                   <a href="blogDetails.html?blogSlug=${slug}" > <h1 id=${slug} class="${
+                   <a href="${slug === "sketchy-wireframing-for-data-analyst" ? "sketchy-wireframing-for-data-analyst" : "blogDetails"}.html?blogSlug=${slug}" > <h1 id=${slug} class="${
     allBlogPost
       ? "blog_card_heading_all_blog margin_top_10"
       : "blog_card_heading"
