@@ -685,6 +685,13 @@ section {
   transition: all 0.3s;
   transition-property: max-height, min-height, box-shadow, background-color;
   border-radius: 2rem;
+
+  /* Truncate text with ellipses */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  /* text-overflow: ellipsis;
+  white-space: normal; */
 }
 .card-grid .card .card-content p {
   color: #323232;
@@ -764,6 +771,9 @@ section {
   font-size: 1.8rem;
   line-height: 1.2;
   margin-top: 0;
+}
+
+.section__who .container .row .card-grid .card :hover .card-content .card-title {
   color: var(--7-cbc-39, #7cbc39);
 }
 
@@ -803,6 +813,7 @@ section {
   z-index: 10000;
   border: 0.1rem solid #7cbc39;
   transition: 0.3s;
+  display: block;
 }
 
 .card-grid:hover .card:not(:hover) {
