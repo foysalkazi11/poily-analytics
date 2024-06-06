@@ -51,6 +51,7 @@ function getBlogList(category = null) {
     .then((response) => response.json())
     .then((data) => {
       const allBlogPost = data?.data?.getAllGeneralBlog;
+      console.log(allBlogPost);
       const featuresBlogList = allBlogPost?.slice(0, 3) || [];
       const allBlogList = allBlogPost?.slice(3) || [];
       makeInnerHtmlEmpty(featuresBlogLeft);
