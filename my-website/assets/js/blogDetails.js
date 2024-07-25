@@ -18,6 +18,7 @@ const authorInfoBox = document.querySelector(".iconBox");
 const blogPostData = document.querySelector(".postDate");
 const getAllFiltersMenu = document.querySelectorAll(".menuBox__text");
 const SocialDiv = document.querySelector(".social_div");
+const copyright = document.querySelector(".copyright");
 
 const URL = "https://srcblending-production.up.railway.app/graphql";
 
@@ -270,3 +271,6 @@ getAllFiltersMenu.forEach((element) => {
     window.location.href = `blog.html?category=${element.id}`;
   });
 });
+
+copyright.getElementsByTagName("h4")[0].innerHTML =`© 2022 POILY - ${new Date().getFullYear()}`
+
