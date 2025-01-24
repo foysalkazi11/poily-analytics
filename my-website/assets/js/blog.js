@@ -20,7 +20,7 @@ const getAllFiltersMenu = document.querySelectorAll(".menuBox__text");
 const allBlogsContainer = document.getElementById("all-blogs-container");
 const divider = document.getElementById("br");
 const noBlogFound = document.getElementById("no_blog_found");
-const URL = "https://srcblending-production.up.railway.app/graphql";
+const URL = "https://leg5p4sucfagxdqwvvfkoknk5i.appsync-api.us-east-1.amazonaws.com/graphql";
 const BASE_URL = "https://www.poily.com/poily_analytics";
 
 // fetch blog list and render
@@ -45,6 +45,7 @@ function getBlogList(category = null) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      // "Authorization": "eyJraWQiOiJtbDQzNlRuQ0l6ZzVpUzlqdlpTRmRwTnB1eWlsR0d0c0pDd1J6YVdQR1ZJPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJjZWJkNDFhZi1kNjM1LTQ1NTMtYWZiMS0wNjgxYTU5ZmE2ZDQiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfbnExRjRRTDAxIiwiY29nbml0bzp1c2VybmFtZSI6ImNlYmQ0MWFmLWQ2MzUtNDU1My1hZmIxLTA2ODFhNTlmYTZkNCIsIm9yaWdpbl9qdGkiOiJjOWI2OWQ4ZC1kNDBkLTQzNjgtYWFiZi02YWE0ZThjMDcwNTYiLCJhdWQiOiIzbzRkM3ZqZTJyc2ZrcDEzZ25iamhvNWhoZSIsImV2ZW50X2lkIjoiMzM5OTc2YTEtMDU1Ny00MGZjLTgyNzYtODFmZDQxZDVjZTc5IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3Mzc2MDkxMjAsImV4cCI6MTczNzY5NTUyMCwiaWF0IjoxNzM3NjA5MTIwLCJqdGkiOiJhNjA1MmM3NS04NGJmLTRkZmYtODQyMS1iZGNmYmIyYzk2YjUiLCJlbWFpbCI6Im1kZm95c2Fsa2F6aUBnbWFpbC5jb20ifQ.ip71xF2ZEnbiLHalBlz59axfXapc_Jm7quFWJQEdiR4LWwWg_6nF_f00mFmOqv41mGjDKlUxiJ62j9iSwKb4HXPERk3kFsNksHgk5GzF6hBDfxAhgwGNHpjn3SCq71Vp1v7m98RK3VmckxvQXeJTOdyKdreLDF2tbyYthun2n0YxEWlDHR09XZt5hQhwWNS4puK9yf1YPfyt9najOvUeYeCrwbT_1_zvKGqhKdQd_C7s33rJkqHmwjb4JfoE8UwwteLQwPVhipeztd7DrccRDXR7eNn9bBcL9uf6JfeO27eIBKdp7GL-qd9lBG6CxER8-kvRiFMRnozPjAL2ok56IQ" 
     },
     body: JSON.stringify({ query: GET_ALL_GENERAL_BLOG, variables }),
   })
