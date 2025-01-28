@@ -20,7 +20,7 @@ const getAllFiltersMenu = document.querySelectorAll(".menuBox__text");
 const SocialDiv = document.querySelector(".social_div");
 const copyright = document.querySelector(".copyright");
 
-const URL = "https://srcblending-production.up.railway.app/graphql";
+const URL = "https://blending101globalapi-production.up.railway.app/generalBlogs";
 
 // open social sharing window
 function socialWindow(url) {
@@ -44,7 +44,8 @@ function getAGeneralBlogBySlug() {
   // make GraphQL query
   const variables = {
     slug: getSlugFormUrl,
-    memberId: null,
+     currentDate: new Date().toISOString().slice(0, 10),
+    // memberId: null,
   };
 
   toggleNode(singleBlogDetailsContainer, false);
@@ -56,11 +57,11 @@ function getAGeneralBlogBySlug() {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ query: GET_A_GENERAL_BLOG_BY_SLUG, variables }),
+    body: JSON.stringify(variables),
   })
     .then((response) => response.json())
     .then((data) => {
-      const detailsABlog = data?.data?.getAgeneralBlogBySlug;
+      const detailsABlog = data?.[0];
       if (!detailsABlog) {
         toggleNode(error, true);
         toggleNode(loading, false);
